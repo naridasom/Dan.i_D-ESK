@@ -1,0 +1,79 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <title>공통 레이아웃</title>
+    <meta name="description" content="단아이">
+    <meta name="keywords" content="단아이">
+    <meta property="og:title" content="단아이">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="단아이">
+    <link rel="canonical" href="#">
+    <meta name="robots" content="index,follow">
+    <!-- css -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/Base.css" rel="stylesheet">
+    <link href="../../css/Layout.css" rel="stylesheet">
+    <link href="../../css/Common.css" rel="stylesheet">
+    <link href="../../css/chatbot.css" rel="stylesheet">
+    <!-- // css -->
+    <!-- js -->
+    <script src="../../js/jquery-3.5.1.min.js"></script>
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/FuncScript.js"></script>
+    <script src="../../js/Common.js"></script>
+    <script src="../../js/respond.js"></script>
+    <script src="../../js/html5shiv.js"></script>
+    <!-- // js -->
+    <!-- page script -->
+    <script type="text/javascript">
+
+    </script>
+    <!-- // page script -->
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header id="header">
+            헤더 영역
+        </header>
+        <!-- // header -->
+        <!-- container -->
+        <div id="container">
+            <div class="inner_wrap">
+                <div class="contents_wrap">
+                    <!-- contents -->
+                    <div class="contents">
+                        컨텐츠 영역
+                    </div>
+                    <!-- // contents -->
+                    <!-- chatbot input area -->
+                    <button type="button" class="btn_icon btn_chatbot"><span onclick="fn_Chatbot_Open(this);">챗봇 메시지 입력</span></button>
+                    <div class="chat_btn_wrap">
+                        <div class="chat_btn_area">
+                            <div class="chat_ipt_area">
+                                <button type="button" class="btn_icon btn_chat_close" onclick="fn_Chatbot_Close();"><span>챗봇 영역 닫기</span></button>
+                                <span class="chat_ipt_box">
+                                    <input type="text" class="form-control" placeholder="궁금한 점을 입력해주세요." />
+                                    <button type="button" class="btn_icon btn_send"><span>챗봇 메시지 전송</span></button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // chatbot input area -->
+                </div>
+            </div>
+        </div>
+        <!-- // container -->
+        <!-- chatbot -->
+        <div class="chatbot_wrap">
+            챗봇 영역
+        </div>
+        <!-- // chatbot -->
+        <!-- footer -->
+        <footer id="footer">
+            푸터 영역
+        </footer>
+        <!-- // footer -->
+    </div>
+</body>
+</html>

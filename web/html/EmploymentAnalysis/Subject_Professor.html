@@ -1,0 +1,407 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, target-densitydpi=medium-dpi">
+    <title></title>
+    <meta name="description" content="단아이">
+    <meta name="keywords" content="단아이">
+    <meta property="og:title" content="단아이">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="단아이">
+    <link rel="canonical" href="#">
+    <meta name="robots" content="index,follow">
+    <!-- css -->
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/Base.css" rel="stylesheet">
+    <link href="css/Layout.css" rel="stylesheet">
+    <link href="css/Common.css" rel="stylesheet">
+    <!-- // css -->
+    <!-- js -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/FuncScript.js"></script>
+    <script src="js/Common.js"></script>
+    <script src="js/respond.js"></script>
+    <script src="js/html5shiv.js"></script>
+    <!-- // js -->
+    <!-- page script -->
+    <script type="text/javascript">
+
+    </script>
+    <!-- // page script -->
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header id="header">
+            <div class="inner_wrap header_wrap">
+                  <h1 class="logo"><a href="#"><span class="icon">단아이</span></a></h1>
+                <nav class="gnb">
+                    <!-- gnb -->
+                    <h2 class="skip">주메뉴</h2>
+                    <ul class="gnb_menu">
+                        <li class="active">
+                            <a href="#none">MY-Desk</a>
+                            <div class="sub_menu_area">
+                                <ul class="sub_menu">
+                                    <li class="active"><a href="#">분석토픽</a></li>
+                                    <li><a href="#">관심토픽</a></li>
+                                    <li><a href="#">수강이력</a></li>
+                                    <li><a href="#">교과과정</a></li>
+                                    <li><a href="#">스크랩</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#none">학과라운지</a>
+                            <div class="sub_menu_area">
+                                <ul class="sub_menu">
+                                    <li><a href="#">기본정보</a></li>
+                                    <li><a href="#">졸업현황</a></li>
+                                    <li><a href="#">토픽정보</a></li>
+                                    <li><a href="#">비교과</a></li>
+                                    <li><a href="#">교재/참고문헌</a></li>
+                                    <li><a href="#">채용</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#none">교과/비교과</a>
+                            <div class="sub_menu_area">
+                                <ul class="sub_menu">
+                                    <li><a href="#">교과</a></li>
+                                    <li><a href="#">비교과</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#none">채용</a>
+                            <div class="sub_menu_area">
+                                <ul class="sub_menu">
+                                    <li><a href="#">채용분석</a></li>
+                                    <li><a href="#">실시간 채용정보</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- // gnb -->
+                </nav>
+                <div class="location">
+                    <!-- 알림이 있을 경우 on 클래스 추가 -->
+                    <span class="ico_noti on" onclick="fn_MoreToggle(this)">
+                        <span class="icon">알림</span>
+                    </span>
+                    <div class="noti_pop_area">
+                        <div class="noti_pop_hd">
+                            <h4>알림</h4>
+                            <button type="button" class="btn_icon btn_noti_colse" onclick="fn_NotiClose();"><span>알림 팝업 닫기</span></button>
+                        </div>
+                        <ul class="noti_pop_list">
+                            <!-- 알림이 있을 경우 (최신순 기준 최대 5개 노출) -->
+                            <li>
+                                <p>
+                                    <strong>[주간브리핑]</strong>
+                                    <!-- 알림 내용이 길 경우 미리보기 되므로 title 필요 -->
+                                    <span title="지난 한 주를 정리했어요">지난 한 주를 정리했어요</span>
+                                </p>
+                                <span class="date">2020.12.13 09:0:00</span>
+                                <span class="icon ico_chatbot">챗봇에서 상세정보 확인</span>
+                            </li>
+                            <li>
+                                <p>
+                                    <strong>[주간브리핑]</strong>
+                                    <span title="지난 한 주를 정리했어요">지난 한 주를 정리했어요</span>
+                                </p>
+                                <span class="date">2020.12.13 09:0:00</span>
+                                <span class="icon ico_chatbot">챗봇에서 상세정보 확인</span>
+                            </li>
+                            <li>
+                                <p>
+                                    <strong>[주간브리핑]</strong>
+                                    <span title="지난 한 주를 정리했어요">지난 한 주를 정리했어요</span>
+                                </p>
+                                <span class="date">2020.12.13 09:0:00</span>
+                                <span class="icon ico_chatbot">챗봇에서 상세정보 확인</span>
+                            </li>
+                            <li>
+                                <p>
+                                    <strong>[주간브리핑]</strong>
+                                    <span title="지난 한 주를 정리했어요">지난 한 주를 정리했어요</span>
+                                </p>
+                                <span class="date">2020.12.13 09:0:00</span>
+                                <span class="icon ico_chatbot">챗봇에서 상세정보 확인</span>
+                            </li>
+                            <li>
+                                <p>
+                                    <strong>[주간브리핑]</strong>
+                                    <span title="지난 한 주를 정리했어요">지난 한 주를 정리했어요</span>
+                                </p>
+                                <span class="date">2020.12.13 09:0:00</span>
+                                <span class="icon ico_chatbot">챗봇에서 상세정보 확인</span>
+                            </li>
+                            <!-- // 알림이 있을 경우 (최신순 기준 최대 5개 노출) -->
+                            <!-- 알림이 없을 경우 -->
+                            <!--<li class="none">도착한 알림이 없어요!</li>-->
+                            <!-- // 알림이 없을 경우 -->
+                        </ul>
+                        <div class="noti_pop_ft">
+                            <p class="more"><a href="Notification.html"><span class="icon_after">더보기</span></a></p>
+                        </div>
+                    </div>
+                    <span class="logout"><a href="#"><span class="icon">로그아웃</span></a></span>
+                </div>
+            </div>
+        </header>
+        <!-- // header -->
+        <!-- container -->
+        <div id="container">
+            <!-- contents -->
+            <div class="inner_wrap">
+                <div class="contents_wrap">
+                    <!-- contents -->
+                    <div class="contents">
+                        <!-- breadcrumb -->
+                        <ul class="cont_breadcrumb">
+                            <li class="home"><span>홈</span></li>
+                            <li><span>MY-Desk</span></li>
+                            <li class="now"><span>분석토픽</span></li>
+                        </ul>
+                        <!-- breadcrumb -->
+                        <div class="cont_hd">
+                            <h3 class="main_title ">분석토픽</h3>
+                            <p class="pag_info">EduAI가 교과, 비교과 수강이력, 관심토픽 등을 종합적으로 분석한 토픽을 모아봤어요!</p>
+                            <p class="topic_state">
+                                <strong>관심토픽</strong>
+                                <button type="button" class="btn_onoff" onclick="fn_OnOff(this)">OFF</button>
+                            </p>
+                        </div>
+                        <div class="cont_body">
+                            <div class="topic_area">
+                                <!-- 분석토픽 차트 영역 -->
+                                <!-- 차트 내 개수는 p 태그 영역 참고 부탁드립니다. -->
+                                <div class="topic_box">
+                                    <p class="topic_count">용어<strong>255</strong>개</p>
+                                    <p class="topic_count">교과<strong>25</strong>개</p>
+                                    <p class="topic_count">비교과<strong>10</strong>개</p>
+                                    <p class="topic_count">자격증<strong>07</strong>개</p>
+                                    <p class="topic_count">채용<strong>06</strong>개</p>
+                                    <p class="topic_count">기업<strong>04</strong>개</p>
+                                </div>
+                                <!-- // 분석토픽 차트 영역 -->
+                                <ul class="topic_info">
+                                    <li>
+                                        <strong>용어</strong>
+                                        <span>교과/비교과/채용 정보를 분석했어요.</span>
+                                    </li>
+                                    <li>
+                                        <strong>비교과</strong>
+                                        <span>비교과 정보를 분석했어요.</span>
+                                    </li>
+                                    <li>
+                                        <strong>교과</strong>
+                                        <span>교과 정보를 분석했어요.</span>
+                                    </li>
+                                    <li>
+                                        <strong>기업/자격증</strong>
+                                        <span>채용 정보를 분석했어요.</span>
+                                    </li>
+                                </ul>
+                                <div class="search_area">
+                                    <p class="search_box">
+                                        <input type="text" class="form-control" placeholder="토픽명을 입력하세요." />
+                                        <button type="button" class="btn_icon btn_search"><span>검색</span></button>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="cont_sub_hd">
+                                <h3 class="sub_title">
+                                    <strong>용어</strong>
+                                    <span>총 <strong>255</strong>개</span>
+                                </h3>
+                                <p class="pag_info">토픽을 선택하면 챗봇으로 분석정보를 확인할 수 있어요!</p>
+                                <div class="voca_state">
+                                    <strong>출처정보</strong>
+                                    <ul class="voca_list">
+                                        <li class="voca_state subject">교과</li>
+                                        <li class="voca_state nonsubject">비교과</li>
+                                        <li class="voca_state recruit">채용</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="voca_area">
+                                <ul class="voca_box">
+                                    <li>
+                                        <div class="voca_tit">
+                                            <strong>르네상스문화와 인문주의</strong>
+                                            <span>빈도수 1210</span>
+                                        </div>
+                                        <p class="voca_chk">
+                                            <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="voca_status" id="voca1" />
+                                            <label for="voca1">사용</label>
+                                        </p>
+                                        <dl class="voca_origin">
+                                            <dt>토픽 출처</dt>
+                                            <dd>
+                                                <ul class="voca_list">
+                                                    <li class="voca_state subject">교과</li>
+                                                    <li class="voca_state nonsubject">비교과</li>
+                                                    <li class="voca_state recruit">채용</li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <div class="paging_area">
+                                    <ul class="paging">
+                                        <li class="page_prev"><a href="#">이전 페이지로 이동</a></li>
+                                        <li class="active"><a href="#none">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li class="page_next"><a href="#">다음 페이지로 이동</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat_btn_area">
+                            <button type="button" class="btn_icon btn_chatbot"><span>챗봇 메시지 입력</span></button>
+                            <div class="chat_ipt_area">
+                                <button type="button" class="btn_icon btn_chat_close"><span>챗봇 영역 닫기</span></button>
+                                <span class="chat_ipt_box">
+                                    <input type="text" class="form-control" placeholder="궁금한 점을 입력해주세요." />
+                                    <button type="button" class="btn_icon btn_send"><span>챗봇 메시지 전송</span></button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // contents -->
+                    <!-- chatbot -->
+                    <div class="chatbot_wrap">
+                        <h3>단아이 챗봇</h3>
+                        <div class="chatbot_box">
+                            <div class="chat_msg my_msg">
+                                <p class="text">르네상스문화와 인문주의 분석정보 알려줘</p>
+                                <p class="info">
+                                    <span class="time">오전 09:00</span>
+                                </p>
+                            </div>
+                            <div class="chat_msg bot_msg">
+                                <p class="avatar">단아이</p>
+                                <p class="text">르네상스문화와 인문주의 분석정보를 알려드릴게요.</p>
+                                <ul class="tag_list">
+                                    <li>#연관토픽</li>
+                                    <li>#연관교과</li>
+                                    <li>#연관비교과</li>
+                                    <li>#연관채용정보</li>
+                                </ul>
+                                <p class="info">
+                                    <span class="time">오전 09:00</span>
+                                    <span class="like">
+                                        <strong>답변이 도움되셨나요?</strong>
+                                        <span class="like_chk">
+                                            <input type="radio" class="icon_chk icon_chk_notxt icon_chk_like" name="like_status" id="like" />
+                                            <label for="like">도움</label>
+                                            <input type="radio" class="icon_chk icon_chk_notxt icon_chk_unlike" name="like_status" id="unlike" />
+                                            <label for="unlike">미도움</label>
+                                        </span>
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="chat_msg bot_msg">
+                                <p class="avatar">단아이</p>
+                                <div class="chat_info_area">
+                                    <div class="chat_info_hd">
+                                        <h4>연관토픽</h4>
+                                        <span>총 <strong>12</strong>개</span>
+                                    </div>
+                                    <div class="chat_info_bd">
+                                        <ul class="chat_topic_list">
+                                            <li>
+                                                <!-- 토픽명이 길면 말줄임되므로 title 필요-->
+                                                <strong title="르네상스문화와 인문주의 르네상스문화와 인문주의">르네상스문화와 인문주의 르네상스문화와 인문주의</strong>
+                                                <div class="chat_voca_area">
+                                                    <ul class="voca_list">
+                                                        <li class="voca_state subject">교과</li>
+                                                        <li class="voca_state nonsubject">비교과</li>
+                                                        <li class="voca_state recruit">채용</li>
+                                                    </ul>
+                                                    <span>빈도수 1210</span>
+                                                </div>
+                                                <span class="topic_chk">
+                                                    <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="voca_status" id="voca1" />
+                                                    <label for="voca1">사용여부</label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="chat_info_ft">
+                                        <p class="more"><a href="#"><span class="icon_after">전체보기</span></a></p>
+                                    </div>
+                                </div>
+                                <ul class="tag_list">
+                                    <li>#연관토픽</li>
+                                    <li>#연관교과</li>
+                                    <li>#연관비교과</li>
+                                    <li>#연관채용정보</li>
+                                </ul>
+                                <p class="info">
+                                    <span class="time">오전 09:00</span>
+                                    <span class="like">
+                                        <strong>답변이 도움되셨나요?</strong>
+                                        <span class="like_chk">
+                                            <input type="radio" class="icon_chk icon_chk_notxt icon_chk_like" name="like_status" id="like" />
+                                            <label for="like">도움</label>
+                                            <input type="radio" class="icon_chk icon_chk_notxt icon_chk_unlike" name="like_status" id="unlike" />
+                                            <label for="unlike">미도움</label>
+                                        </span>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // chatbot -->
+                </div>
+                <!-- contents -->
+            </div>
+            <!-- // container -->
+        </div>
+        <button type="button" class="btn_icon btn_top"><span>상단으로 이동</span></button>
+        <!-- footer -->
+        <footer id="footer">
+            <h2 class="skip">푸터 메뉴</h2>
+            <div class="inner_wrap footer_wrap">
+                <h2 class="foot_logo"><a href="#"><span class="icon">DKU</span></a></h2>
+                <div class="foot_info_wrap">
+                    <p class="center">
+                        <strong>미래교육혁신원 EduAI센터</strong>
+                        <span>Innovation Institute for Future Education EduAI Center</span>
+                    </p>
+                    <address class="address">
+                        <strong>죽전캠퍼스</strong>
+                        <span>(우) 16890 경기도 용인시 수지구 죽전로 152 범정관 117-1호 EduAI센터</span>
+                    </address>
+                    <p class="copy">Copyright&copy; BY DANKOOK UNIVERSITY. All rights reserved.</p>
+                </div>
+                <ul class="foot_btn_area">
+                    <li><a href="#">1:1 문의</a></li>
+                    <li>
+                        <select class="form-control" onchange="javascript:go_url(this.options[this.selectedIndex].value);">
+                            <option value="#" selected="selected">서비스바로가기</option>
+                            <option value="https://www.dankook.ac.kr/">단국대학교</option>
+                            <option value="http://mirae.dankook.ac.kr/">단국대학교 미래교육혁신위</option>
+                            <option value="http://lib.dankook.ac.kr/">단국대학교 퇴계기념중앙도서관</option>
+                            <option value="http://libc.dankook.ac.kr/">단국대학교 율곡기념도서관</option>
+                            <option value="https://youngwoong.dankook.ac.kr/">Young熊 Story(영웅스토리)"</option>
+                            <option value="https://portal.dankook.ac.kr/web/portal">단국대학교 PORTAL</option>
+                            <option value="http://voc.dankook.ac.kr/">DKU VOC</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <!-- // footer -->
+    </div>
+</body>
+</html>

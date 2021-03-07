@@ -1,0 +1,22 @@
+{
+  "name": "Dan.i_D-ESK",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naridasom/Dan.i_D-ESK.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naridasom/Dan.i_D-ESK/issues"
+  },
+  "homepage": "https://github.com/naridasom/Dan.i_D-ESK#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

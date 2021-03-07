@@ -1,0 +1,369 @@
+
+@font-face {
+  font-family: 'NanumGothic';
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/NanumGothicLight.eot");
+  src: url("../fonts/NanumGothicLight.eot") format("embedded-opentype"), url("../fonts/NanumGothicLight.woff") format("woff"), url("../fonts/NanumGothicLight.TTF") format("truetype"); }
+
+@font-face {
+  font-family: 'NanumGothic';
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/NanumGothic.eot");
+  src: url("../fonts/NanumGothic.eot") format("embedded-opentype"), url("../fonts/NanumGothic.woff") format("woff"), url("../fonts/NanumGothic.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'NanumGothic';
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/NanumGothicBold.eot");
+  src: url("../fonts/NanumGothicBold.eot") format("embedded-opentype"), url("../fonts/NanumGothicBold.woff") format("woff"), url("../fonts/NanumGothicBold.TTF") format("truetype"); }
+
+@font-face {
+  font-family: 'NanumGothic';
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/NanumGothicExtraBold.eot");
+  src: url("../fonts/NanumGothicExtraBold.eot") format("embedded-opentype"), url("../fonts/NanumGothicExtraBold.woff") format("woff"), url("../fonts/NanumGothicExtraBold.TTF") format("truetype"); }
+
+@font-face {
+  font-family: 'Gong Gothic';
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/Gong Gothic Light.eot");
+  src: url("../fonts/Gong Gothic Light.eot") format("embedded-opentype"), url("../fonts/Gong Gothic Light.woff") format("woff"), url("../fonts/Gong Gothic Light.TTF") format("truetype"); }
+
+@font-face {
+  font-family: 'Gong Gothic';
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Gong Gothic Medium.eot");
+  src: url("../fonts/Gong Gothic Medium.eot") format("embedded-opentype"), url("../fonts/Gong Gothic Medium.woff") format("woff"), url("../fonts/Gong Gothic Medium.TTF") format("truetype"); }
+
+@font-face {
+  font-family: 'Gong Gothic';
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/Gong Gothic Bold.eot");
+  src: url("../fonts/Gong Gothic Bold.eot") format("embedded-opentype"), url("../fonts/Gong Gothic Bold.woff") format("woff"), url("../fonts/Gong Gothic Bold.TTF") format("truetype"); }
+
+/* ------------------------------------------------------- FONT ------------------------------------------------------- */
+/* ------------------------------------------------------- COLOR ------------------------------------------------------- */
+/* ------------------------------------------------------- LAYOUT ------------------------------------------------------- */
+/* ------------------------------------------------------- MIXINS ------------------------------------------------------- */
+html, body {
+  width: 100%; }
+
+body, div, h1, h2, h3, h4, h5, h6, ol, ul, li, dl, dt, dd, a, img, p, span,
+form, fieldset, legend, label, input, select, button,
+table, caption, colgroup, col, thead, tbody, tr, th, td, address, tfoot,
+header, nav, footer, section, article, mark, figure, figcaption, time, aside, small, blockquote {
+  margin: 0;
+  padding: 0; }
+
+html, header, nav, footer, section, article, figure, figcaption, aside, small {
+  display: block; }
+
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  color: #222;
+  font-family: "Noto Sans KR", "Noto Sans KR", sans-serif !important;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.4;
+  margin-left: auto;
+  margin-right: auto;
+  word-break: keep-all;
+  -ms-word-break: keep-all; }
+
+* {
+  box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Noto Sans KR", "Noto Sans KR", sans-serif !important;
+  margin: 0; }
+
+ul, ol {
+  list-style: none; }
+
+img, fieldset, input, button {
+  border: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a, a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: #333; }
+
+a:focus {
+  outline: none !important;
+  color: #333; }
+
+button, img {
+  vertical-align: middle; }
+
+.skip, legend, caption, .sr_only {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  visibility: hidden;
+  line-height: 0;
+  font-size: 0;
+  position: absolute;
+  left: -999px; }
+
+sup {
+  vertical-align: super;
+  font-size: smaller;
+  color: #B71C1C; }
+
+em, strong {
+  font-style: normal;
+  font-weight: 600; }
+
+.left {
+  text-align: left !important; }
+
+.center {
+  text-align: center !important; }
+
+.right {
+  text-align: right !important; }
+
+/* ------------------------------------------------------- COMMON > LAYOUT ------------------------------------------------------- */
+.ic {
+  width: 100%;
+  height: 50%;
+  display: inline-block;
+  background: url(../images/icons_m.png) no-repeat 0 0/97.65625vw auto;
+  text-indent: -1000vw; }
+  .ic.alert {
+    background-position: -13.86719vw 0; }
+  .ic.logout {
+    background-position: -19.53125vw 0; }
+  .ic.selectbox {
+    background-position: -17.57813vw -24.02344vw; }
+
+.header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 11.71875vw;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3.90625vw;
+  border-bottom: 0.09766vw solid #e6e7e8;
+  z-index: 999; }
+  .header h1.logo {
+    width: 13.86719vw;
+    height: 5.66406vw;
+    display: inline-block; }
+  .header .location > a {
+    width: 5.66406vw;
+    height: 5.66406vw;
+    display: inline-block; }
+    .header .location > a:first-child {
+      margin-right: 3.71094vw; }
+
+.container-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: calc(100vh - 11.71875vw - 18.55469vw);
+  position: relative;
+  z-index: 998; }
+  .container-wrap .container > .nav_select_swiper {
+    width: 100vw;
+    height: 11.71875vw;
+    border-bottom: 0.09766vw solid #e6e7e8;
+    padding: 0 3.90625vw;
+    z-index: 997; }
+    .container-wrap .container > .nav_select_swiper .sub_menu > li {
+      display: inline-block;
+      position: relative;
+      flex-shrink: 1; }
+      .container-wrap .container > .nav_select_swiper .sub_menu > li a {
+        display: inline-block;
+        color: #b1b1b1;
+        font-size: 3.90625vw;
+        font-weight: 400;
+        line-height: 11.71875vw;
+        padding: 0 2.44141vw; }
+      .container-wrap .container > .nav_select_swiper .sub_menu > li.active a {
+        color: #222;
+        font-weight: 600; }
+        .container-wrap .container > .nav_select_swiper .sub_menu > li.active a::before {
+          content: '';
+          width: 1.56250vw;
+          height: 1.56250vw;
+          display: inline-block;
+          border-radius: 50%;
+          background-color: #0054a3;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          margin-top: -0.78125vw; }
+  .container-wrap .container > .contents {
+    width: 100vw;
+    height: calc(100vh - 11.71875vw - 18.55469vw - 11.71875vw);
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #fff;
+    padding: 0 3.90625vw; }
+
+.footer {
+  width: 100vw;
+  height: 18.55469vw;
+  position: relative;
+  text-align: center;
+  z-index: 999; }
+  .footer > .nav {
+    width: calc(100vw - 3.90625vw*2);
+    height: 100%;
+    margin: 0 auto; }
+    .footer > .nav .main_menu {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      height: 100%; }
+      .footer > .nav .main_menu li {
+        width: 20%;
+        height: 100%;
+        flex-shrink: 0; }
+        .footer > .nav .main_menu li a {
+          height: 100%;
+          display: block;
+          padding-top: 13.08594vw;
+          font-size: 3.12500vw;
+          font-weight: 600;
+          color: #888;
+          position: relative; }
+          .footer > .nav .main_menu li a::before {
+            content: '';
+            width: 9.17969vw;
+            height: 9.17969vw;
+            display: inline-block;
+            position: absolute;
+            top: 1.95313vw;
+            left: calc(50% - 9.17969vw/2);
+            background: url(../images/icons_m.png) no-repeat 0 -5.76172vw/97.65625vw auto; }
+            .my_desk a::before {
+              background-position-x: 0 !important; }
+            .department_lounge a::before {
+              background-position-x: -9.17969vw !important; }
+            .subject a::before {
+              background-position-x: -18.35938vw !important; }
+            .recruit a::before {
+              background-position-x: -27.53906vw !important; }
+            .chatbot a::before {
+              background-position-x: -36.71875vw !important; }
+        .footer > .nav .main_menu li.active a {
+          color: #0054a3; }
+          .footer > .nav .main_menu li.active a::before {
+            background-position-y: -14.94141vw !important; }
+
+/* ------------------------------------------------------- COMMON > FONTS ------------------------------------------------------- */
+.tit {
+  color: #333;
+  font-size: 3.90625vw;
+  font-weight: 500;
+  line-height: 1.25; }
+  .cont_hd > .tit {
+    font-weight: 400;
+    line-height: 1.5; }
+  .list_hd .tit {
+    font-family: "Gong Gothic", sans-serif !important;
+    font-size: 5.07813vw;
+    font-weight: 500;
+    color: #000; }
+
+.desc {
+  color: #555;
+  line-height: 1.8; }
+  .list .desc {
+    font-size: 28px;
+    line-height: 1.78; }
+  .list_hd .desc {
+    font-family: "Gong Gothic", sans-serif !important;
+    font-size: 3.51563vw;
+    font-weight: 500;
+    color: 000; }
+
+.text_blue {
+  color: #0054a3 !important; }
+
+/* ------------------------------------------------------- COMMON > CLASS ------------------------------------------------------- */
+.btn {
+  background: #fff; }
+
+.inline_wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .inline_wrap .form-group, .inline_wrap label {
+    flex-grow: 1;
+    margin-right: 4px;
+    min-width: 200px; }
+  .inline_wrap button {
+    flex: 0 0 auto;
+    margin-left: .75rem; }
+  .inline_wrap.align_top {
+    align-items: flex-start; }
+
+.list_view {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column; }
+  .list_view .list_hd {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.19531vw solid #a3a3a3;
+    padding: 1.17188vw 0; }
+    .list_view .list_hd > div * {
+      display: inline-block; }
+    .list_view .list_hd > div .tit {
+      margin-right: 1.56250vw; }
+    .list_view .list_hd > div .btn {
+      width: 9.76563vw;
+      height: 9.76563vw;
+      padding: 0.48828vw;
+      display: inline-block;
+      border: 0.09766vw solid #dadada; }
+  .list_view .list_cont .list > li {
+    padding: 3.90625vw 0;
+    border-bottom: 0.09766vw solid #ddd; }
+    .list_view .list_cont .list > li > div {
+      margin-bottom: 1.95313vw; }
+  .list_view .list_cont .list .tag_list > li {
+    display: inline-block;
+    margin: 0 0.48828vw; }
+    .list_view .list_cont .list .tag_list > li > a {
+      padding: 1.46484vw 3.90625vw;
+      border: 0.09766vw solid #e6e7e8;
+      border-radius: 6.34766vw;
+      font-size: 3.12500vw;
+      font-weight: 600; }
+
+/* ------------------------------------------------------- COMMON > FORM ------------------------------------------------------- */

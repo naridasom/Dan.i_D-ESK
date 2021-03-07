@@ -1,0 +1,89 @@
+﻿        <!-- 연관 토픽 팝업 -->
+<div class="modal fade" id="Pop_RelationTopic" tabindex="-1" aria-labelledby="ModalLabel" aria-modal="true" role="dialog">
+    <div class="modal-dialog modal_type_03">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="pop_title">연관토픽</h5>
+                <button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><span>팝업 창 닫기</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal_tab_area">
+                    <form method="#" action="#">
+                        <div class="business_area">
+                            <p class="business_tit">
+                                <strong class="p_main_title">블렌딩</strong>
+                                <span class="p_sub_title">[KR산업] 2021년 신입사원 정기 공개 채용 공고</span>
+                            </p>
+                            <div class="business_box">
+                                <strong class="p_main_title">블렌딩</strong>
+                                <p class="topic_chk">
+                                    <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="business" id="business1">
+                                    <label for="business1">사용</label>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 연관토픽 NULL 값이 아닌 경우 -->
+                        <div class="search_area modal_search_area">
+                            <p class="search_box">
+                                <input type="text" class="form-control" placeholder="토픽명을 입력하세요.">
+                                <button type="button" class="btn_icon btn_search"><span>검색</span></button>
+                            </p>
+                        </div>
+                        <div class="list_title_area list_title_area02">
+                            <p class="list_count">총 <strong>12</strong>개</p>
+                            <div class="filter_wrap">
+                                <button type="button" class="btn_icon icon_filter" onclick="fn_MoreToggle(this);"><span>필터</span></button>
+                                <div class="filter_pop_list">
+                                    <strong class="title">정렬</strong>
+                                    <span class="icon_after" onclick="fn_Toggle(this);">빈도수</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relation_area">
+                            <ul class="relation_list relation_list_type04">
+                                <li>
+                                    <div class="relation_box">
+                                        <strong class="p_main_title">인공지능</strong>
+                                        <div class="p_sub_area">
+                                            <ul class="tag_list">
+                                                <li>교과</li>
+                                                <li>비교과</li>
+                                                <li>채용</li>
+                                            </ul>
+                                            <span class="p_sub_title">빈도수 121</span>
+                                        </div>
+                                        <p class="rel_chk">
+                                            <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="relation" id="relation1">
+                                            <label for="relation1">사용</label>
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="paging_area">
+                            <ul class="paging">
+                                <li class="page_prev"><a href="#"><span class="icon">이전 페이지로 이동</span></a></li>
+                                <li class="active"><a href="#none">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li class="page_next"><a href="#"><span class="icon">다음 페이지로 이동</span></a></li>
+                            </ul>
+                        </div>
+                        <!-- // 연관토픽 NULL 값이 아닌 경우 -->
+                        <!-- 연관토픽 NULL 값인 경우 -->
+                        <!--<p class="sub_tab_none">
+                            <span>
+                                선택한 채용공고와 연관된 토픽은<br />
+                                아직 분석되지 않았어요. 추후에 반영될 예정입니다.
+                            </span>
+                        </p>-->
+                        <!-- // 연관토픽 NULL 값인 경우 -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // 연관 토픽 팝업 -->

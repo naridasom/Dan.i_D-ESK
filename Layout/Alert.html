@@ -1,0 +1,80 @@
+﻿    <html>
+<head>
+    <meta charset="utf-8">
+    <title>공통 Alert 팝업</title>
+    <meta name="description" content="단아이">
+    <meta name="keywords" content="단아이">
+    <meta property="og:title" content="단아이">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="단아이">
+    <link rel="canonical" href="#">
+    <meta name="robots" content="index,follow">
+    <!-- css -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/Base.css" rel="stylesheet">
+    <link href="../../css/Layout.css" rel="stylesheet">
+    <link href="../../css/Common.css" rel="stylesheet">
+    <!-- // css -->
+    <!-- js -->
+    <script src="../../js/jquery-3.5.1.min.js"></script>
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/FuncScript.js"></script>
+    <script src="../../js/Common.js"></script>
+    <script src="../../js/respond.js"></script>
+    <script src="../../js/html5shiv.js"></script>
+    <!-- // js -->
+    <!-- page script -->
+    <script type="text/javascript">
+
+    </script>
+    <!-- // page script -->
+</head>
+<body>
+    <div id="wrap">
+        <!-- alert type - success -->
+        <div class="modal fade" id="Alert_Success"  tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+            <div class="modal-dialog alert_modal_wrap">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <p class="alert_txt">문구 예시 : 수정 완료되었습니다.</p>
+                    </div>
+                    <div class="modal-footer only">
+                        <button type="button" class="btn btn_primary btn_primary01" data-dismiss="modal" aria-hidden="true">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // alert type - success -->
+        <!-- alert type - error -->
+        <div class="modal fade" id="Alert_Error"  tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+            <div class="modal-dialog alert_modal_wrap">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <p class="alert_txt">문구 예시 : 오류가 발생하였습니다.</p>
+                    </div>
+                    <div class="modal-footer only">
+                        <button type="button" class="btn btn_primary btn_primary01" data-dismiss="modal" aria-hidden="true">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // alert type - error -->
+        <!-- alert type - confirm -->
+        <div class="modal fade" id="Alert_Confirm"  tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+            <div class="modal-dialog alert_modal_wrap">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <p class="alert_txt">문구 예시 : 로그아웃하시겠어요?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn_tertiary" data-dismiss="modal" aria-hidden="true">취소</button>
+                        <button type="button" class="btn btn_primary btn_primary01">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- alert type - confirm -->
+    </div>
+</body>
+</html>    
+    
