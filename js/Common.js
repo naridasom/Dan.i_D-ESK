@@ -88,7 +88,7 @@ function go_url(url) {
 
 // top 버튼 클릭시 상단으로 이동
 function scroll_top() {
-    if ($("body").scrollTop() <= 1) {
+    if ($(window).scrollTop() <= 1) {
         $(".btn_top").fadeOut("slow");
     }
     else {

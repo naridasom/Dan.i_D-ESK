@@ -43,7 +43,7 @@
     }
 
     // 스크롤 여부에 따라 top 버튼 생성
-    $("body").scroll(function () {
+    $(window).scroll(function () {
         setTimeout(scroll_top, 0);//화살표가 반응하여 생기는 시간
     });
 
@@ -61,7 +61,7 @@
         });
     };
 
-    $("body").scrollStopped(function () {
+    $(window).scrollStopped(function () {
         $(".btn_top").fadeOut("slow");
     });
 

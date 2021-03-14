@@ -82,7 +82,7 @@ body.open{overflow-y:hidden;}
 .btn_top > span{width:44px; height:44px; background-position:0 -160px;}
 
 /* ------------------------------------------------------- loading ------------------------------------------------------- */
-.loading{/*display: none;*/ z-index: 200; position: fixed; top: 0; right: 0; left: 0; bottom: 0; background-color: rgba(0,0,0,0.8);}
+.loading{/*display: none;*/ z-index: 1000; position: fixed; top: 0; right: 0; left: 0; bottom: 0; background-color: rgba(0,0,0,0.8);}
 .loading_icon{display:flex; flex-direction: column; align-items:center; justify-content:center; width:100%; height:100%;}
 .loading_icon > span{display:block; line-height:26px; font-family: "Gong Gothic"; font-weight: 300; font-size:16px; color:#fff; padding-top:20px; text-align:center;}
 .pop_loading{z-index: 200; position: absolute; top: 60px; right: 0; left: 0; bottom: 0; background-color: rgba(0,0,0,0.8); border-radius:0 0 10px 10px;}

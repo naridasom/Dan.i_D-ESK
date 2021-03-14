@@ -4,7 +4,7 @@ audio,canvas,progress,video{display:inline-block;}
 html,body,div,p,h1,h2,h3,h4,h5,h6,dl,dt,dd,ol,ul,li,dl,dt,dd,label,strong,blockquote,pre,button,fieldset,form,legend,table,caption,tbody,tfoot,thead,tr,th,td,iframe,article,aside,canvas,details,embed,figure,figcaption,header,footer,menu,nav,section,summary,audio,video,address{margin:0;padding:0;border:0;font-size:inherit;font-family: 'NanumGothic','Malgun Gothic', Apple got;vertical-align:baseline;line-height:inherit; font-weight:normal;}
 
 html,body{-webkit-tap-highlight-color:transparent;}
-body{min-width:1200px; overflow-x:auto; overflow-y:hidden; font-size:14px; color: #222; padding-right:0 !important; padding-top:152px; background-color: #fff;}
+body{min-width:1200px; overflow-x:auto; overflow-y:auto; font-size:14px; color: #222; padding-right:0 !important; padding-top:152px; background-color: #fff;}
 
 
 img{max-width:100%;}
