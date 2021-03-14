@@ -20,13 +20,35 @@
         $(".tooltip").removeClass("tooltip-sm");
     })
 
+    $(window).scroll(function () {
+        var lScroll = $(this).scrollLeft();
+        $("#header").css('left', -lScroll);
+    });
+
+    header_load();
+
+    function header_load() {
+        var w_width = $(window).width();
+        var sL = $(window).scrollLeft();
+        var val = $("#header").offset().left;
+
+        // 1241 해상도
+        if (w_width > 1241) {
+            $("#header").css('left', '0');
+        }
+        // 0 ~ 1240 해상도
+        else {
+            $("#header").css('left', -sL);
+        }
+    }
+
     // 스크롤 여부에 따라 top 버튼 생성
-    $(".contents").scroll(function () {
+    $("body").scroll(function () {
         setTimeout(scroll_top, 0);//화살표가 반응하여 생기는 시간
     });
 
     $(".btn_top").click(function () {
-        $(".contents").animate({ scrollTop: 0 }, 400);//화살표 클릭시 화면 스크롤 속도
+        $("body").animate({ scrollTop: 0 }, 400);//화살표 클릭시 화면 스크롤 속도
         return false;
     });
 
@@ -39,8 +61,18 @@
         });
     };
 
-    $(".contents").scrollStopped(function () {
+    $("body").scrollStopped(function () {
         $(".btn_top").fadeOut("slow");
+    });
+
+    // Tab
+    $('.con_tab > li').click(function () {
+        var activeTab = $(this).attr('rel');
+        $('.con_tab > li').removeClass('active');
+        $('.con_tab_box').removeClass('active');
+        $(this).addClass('active');
+        $('#' + activeTab).addClass('active');
+        load_chatbox();
     });
 
     // Topic Toggle
@@ -94,6 +126,15 @@
         }
     });
 
+    $(document).on('click', 'a.filter_tit[href^="#"]', function (event) {
+        event.preventDefault();
+
+        //alert($($.attr(this, 'href')).offset().top + 152);
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top - 172
+        }, 500);
+    });
+
     // modal backdrop multiple issue
     $(document).on('show.bs.modal', '.modal', function (event) {
         var zIndex = 1040 + (10 * $('.modal:visible').length);
@@ -101,33 +142,6 @@
         setTimeout(function () {
             $('.modal-backdrop').not('.modal-stack').css('z-index', zIndex - 1).addClass('modal-stack');
         }, 0);
-    });
-
-    //전공이수에 따른 졸업자수 .status_area
-    $('.status_list > li').click(function(){
-        var num=$(this).index();
-
-        $('.status_list > li').removeClass('active');
-        $(this).addClass('active');
-        $('.status_area > .status_cont > li').removeClass('active');
-        $('.status_area > .status_cont > li').eq(num).addClass('active');
-        return false;
-    })
-
-     // 캠퍼스라이프 gnb 활성화
-     $('.camp_menu > li').click(function(){
-        var num=$(this).index();
-
-        $('.camp_menu > li').removeClass('active');
-        $(this).addClass('active');
-        $('.modal_body > section').removeClass('active');
-         $('.modal_body > section').eq(num).addClass('active');
-         if ($(this).hasClass("camp_menu_lg")) {
-             $(".camp_wrap").removeClass("camp_wrap01");
-         } else {
-             $(".camp_wrap").addClass("camp_wrap01");
-         }
-        return false;
     });
     
 });

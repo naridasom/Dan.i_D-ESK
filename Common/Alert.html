@@ -1,0 +1,121 @@
+﻿<html>
+<head>
+	<meta charset="utf-8">
+	<title>Confirm 팝업</title>
+	<meta name="description" content="D-esk">
+	<meta name="keywords" content="D-esk">
+	<meta property="og:title" content="D-esk">
+	<meta property="og:image" content="">
+	<meta property="og:description" content="D-esk">
+	<link rel="canonical" href="#">
+	<meta name="robots" content="index,follow">
+	<!--lib-->
+	<script type="text/javascript" src="../js/lib/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript" src="../js/lib/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/index.js"></script>
+	<!--custom-->
+	<link rel="stylesheet" href="../css/lib/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/index.css" />
+	<script type="text/javascript">
+
+	</script>
+	<!-- // page script -->
+</head>
+<body>
+	<div id="wrap">
+		<!-- header -->
+		<header id="header">
+			<div class="header_wrap">
+				<div class="inner_wrap">
+					<h1 class="logo"><a href="index.html"><span class="icon">D-esk</span></a></h1>
+					<nav class="gnb">
+						<!-- gnb -->
+						<h2 class="skip">주메뉴</h2>
+						<ul class="gnb_menu">
+							<li><a href="../IntegrationSearch/Index.html">통합검색</a></li>
+							<li><a href="../SubjectAnalysis/Index.html">교과분석</a></li>
+							<li><a href="../NonSubjectAnalysis/Index.html">비교과분석</a></li>
+							<li><a href="../DepartmentAnalysis/Index.html">학과분석</a></li>
+							<li><a href="../EmploymentAnalysis/Index.html">취업분석</a></li>
+							<li><a href="../RecruitAnalysis/Index.html">채용분석</a></li>
+							<li><a href="../LectureHistoryAnalysis/Index.html">수강이력분석</a></li>
+							<li><a href="../EducationStatistics/Index.html">교육지식통계현황</a></li>
+						</ul>
+						<!-- // gnb -->
+					</nav>
+					<div class="location">
+						<span class="name">홍길동님</span>
+						<span class="logout"><a href="#">로그아웃</a></span>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<div class="inner_wrap">
+				<div class="contents_wrap">
+					<!-- contents -->
+					<div class="contents">
+						<a href="#Alert_Basic" data-toggle="modal">일반 팝업</a>
+						<a href="#Alert_Confirm" data-toggle="modal">컨펌 팝업</a>
+					</div>
+					<!-- // contents -->
+				</div>
+			</div>
+		</div>
+		<!-- // container -->
+		<!-- footer -->
+		<footer id="footer">
+			<div class="footer_wrap">
+				<div class="inner_wrap">
+					<h2 class="skip">푸터 메뉴</h2>
+					<h2 class="foot_logo"><a href="#"><span class="icon">EduAI</span></a></h2>
+					<div class="foot_info_wrap">
+						<p class="center">
+							<strong class="ft_gong_400">미래교육혁신원 EduAI센터</strong>
+							<span class="ft_gong_300">Innovation Institute for Future Education EduAI Center</span>
+
+						</p>
+						<address class="address">
+							<strong>죽전캠퍼스</strong>
+							<span>(우) 16890 경기도 용인시 수지구 죽전로 152 범정관 117-1호 EduAI센터</span>
+						</address>
+						<p class="copy">Copyright&copy; BY DANKOOK UNIVERSITY. All rights reserved.</p>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="btn_icon btn_top"><span>상단으로 이동</span></button>
+		</footer>
+		<!-- // footer -->
+		<!-- Alert -->
+		<div class="modal fade alert_modal" id="Alert_Basic" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						<p class="alert_txt">수정되었습니다.</p>
+					</div>
+					<div class="modal-footer only">
+						<button type="button" class="btn btn_primary btn_primary01" data-dismiss="modal" aria-hidden="true">확인</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade alert_modal" id="Alert_Confirm" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						<p class="alert_txt">저장하시겠습니까?</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn_tertiary" data-dismiss="modal" aria-hidden="true">취소</button>
+						<button type="button" class="btn btn_primary btn_primary01">확인</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Alert -->
+	</div>
+</body>
+</html>

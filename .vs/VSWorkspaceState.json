@@ -1,15 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\css",
-    "\\Error",
-    "\\images",
-    "\\images\\bg",
-    "\\images\\icon",
+    "\\DepartmentAnalysis",
+    "\\EducationStatistics",
+    "\\EmploymentAnalysis",
     "\\js",
-    "\\Notification",
-    "\\scss",
-    "\\Subject"
+    "\\js\\lib",
+    "\\Layout",
+    "\\LectureHistoryAnalysis",
+    "\\NonSubjectAnalysis",
+    "\\RecruitAnalysis"
   ],
+  "SelectedNode": "\\images",
   "PreviewInSolutionExplorer": false
 }
