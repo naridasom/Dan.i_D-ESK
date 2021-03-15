@@ -25,6 +25,7 @@
 .sub_tab_none{
     display:flex; height:540px; align-items:center; justify-content:center;
     > span{display:block; line-height:26px; font-family: "Gong Gothic"; font-weight: 300; font-size:16px; color:#999; text-align:center;}
+    &.sub_tab_none01{height:400px; padding-bottom:30px;}
 }
 
 .list_title_area{

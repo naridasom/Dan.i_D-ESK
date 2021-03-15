@@ -25,7 +25,6 @@
         $("#header").css('left', -lScroll);
     });
 
-    header_load();
 
     function header_load() {
         var w_width = $(window).width();
@@ -41,6 +40,8 @@
             $("#header").css('left', -sL);
         }
     }
+
+    header_load();
 
     // 스크롤 여부에 따라 top 버튼 생성
     $(window).scroll(function () {
