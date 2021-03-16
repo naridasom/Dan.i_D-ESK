@@ -18,7 +18,38 @@
 }
 
 .modal_body{
-    .pop_tbl_area{max-height: 420px; overflow-y: auto;}
+    .pop_sub_title{font-family:$sub_font_family; font-weight: 400; font-size:16px; color:#222; padding:20px 0;}
+    .cont_tbl_wrap{
+        margin-top:0; margin-bottom:70px;
+            .pop_tbl_area{
+            max-height: 420px; overflow-y: auto;
+            .tbl{
+                &.tbl_ver_list{
+                    tr:first-child th, tr:first-child td{border-top:none;}
+                    th, td{}
+                    th{}
+                    td{
+                        &.td_info{
+                            > strong{
+                                font-size:16px; font-weight:500; color:#000; margin-right:10px;
+                            }
+                            > span{font-size:13px; color:#888;}
+                        }
+                        .tbl_con_list{
+                            > li{
+                                font-size:13px; line-height:24px;
+                                @at-root .modal_body .pop_tbl_area .tbl_con_list > li .subject_btn{
+                                    display:inline-block; vertical-align:middle; margin-left:7px;
+                                    a{line-height:normal;}
+                                }
+                            }
+                        }
+                    
+                    }
+                }
+            }
+        }
+    }
 }
 
 
@@ -26,6 +57,7 @@
     display:flex; height:540px; align-items:center; justify-content:center;
     > span{display:block; line-height:26px; font-family: "Gong Gothic"; font-weight: 300; font-size:16px; color:#999; text-align:center;}
     &.sub_tab_none01{height:400px; padding-bottom:30px;}
+    &.sub_tab_none02{height:400px; padding-top:70px;}
 }
 
 .list_title_area{
@@ -73,7 +105,9 @@
     }
 }
 
-
+.chart_area{
+    padding:45px;
+}
 
 /**/
 

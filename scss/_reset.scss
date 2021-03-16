@@ -12,7 +12,7 @@ img,fieldset{border:none; }
 b,strong{font-weight:500;}
 em,dfn,cite,address,i{font-style:normal;}
 label{cursor:pointer; margin:0; vertical-align:middle; font-weight:500;}
-a,a:link,a:hover,a:active{text-decoration:none; color:#333;}
+a,a:link,a:hover,a:active{text-decoration:none; color:#222;}
 button:focus, button:active, input:focus, input:active, textarea:focus, textarea:active{outline:none !important;}
 
 ol,ul,li{list-style:none;}
@@ -88,6 +88,8 @@ input[type=checkbox].icon_chk_like_sm:checked + label:before {background-positio
 .a_btn_white{color:#555; background-color:#fff; border:1px solid #d4d4d4;}
 .a_btn_lightgray{color:#222; background-color:#f9f9f9; border:1px solid #d4d4d4;}
 .a_btn_lightgray:link,.a_btn_lightgray:hover,.a_btn_lightgray:active{color:#222;}
+.a_btn_lightgray01{color:#555; background-color:#f1f1f1; border:1px solid #555;}
+.a_btn_lightgray01:link,.a_btn_lightgray01:hover,.a_btn_lightgray01:active{color:#555;}
 .a_btn_gray{color:#fff; background-color:#555; border:1px solid #555;}
 .a_btn_gray:link,.a_btn_gray:hover,.a_btn_gray:active{color:#fff;}
 .a_btn_sky{color:#fff; background-color:#48b9e1; border:1px solid #48b9e1;}
