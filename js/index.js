@@ -9,7 +9,20 @@
     });
 
     // tooltip
-    $('[data-toggle="tooltip"]').tooltip();
+    //$('[data-toggle="tooltip"]').tooltip();
+    $(".tooltip_txt").each(function () {
+        $(this).tooltip({
+            content: function () {
+                return $(this).prop('title');
+            },
+            position: {
+                //of: $(this),
+                my: "left top",
+                at: "left bottom",
+            }
+        });
+    })
+    
 
     // tooltip sm custom
     $('.tooltip_sm').on('shown.bs.tooltip', function () {

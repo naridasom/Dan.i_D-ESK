@@ -1,7 +1,7 @@
 ﻿<html>
 <head>
     <meta charset="utf-8">
-    <title>통합검색</title>
+    <title>교과분석</title>
     <meta name="description" content="D-esk">
     <meta name="keywords" content="D-esk">
     <meta property="og:title" content="D-esk">
@@ -12,11 +12,16 @@
     <!--lib-->
     <script type="text/javascript" src="../js/lib/jquery-3.5.1.min.js"></script>
     <script type="text/javascript" src="../js/lib/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../js/lib/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript" src="../js/lib/jquery.mCustomScrollbar.concat.min.js"></script>
     <script type="text/javascript" src="../js/common.js"></script>
     <script type="text/javascript" src="../js/index.js"></script>
     <!--custom-->
     <link rel="stylesheet" href="../css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/lib/jquery-ui-1.12.1.min.css">
+    <link rel="stylesheet" href="../css/lib/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
     <script type="text/javascript">
 
     </script>
@@ -26,28 +31,26 @@
     <div id="wrap">
         <!-- header -->
         <header id="header">
-            <div class="header_wrap">
-                <div class="inner_wrap">
-                    <h1 class="logo"><a href="../IntegrationSearch/index.html"><span class="icon">D-esk</span></a></h1>
-                    <nav class="gnb">
-                        <!-- gnb -->
-                        <h2 class="skip">주메뉴</h2>
-                        <ul class="gnb_menu">
-                            <li><a href="../IntegrationSearch/Index.html">통합검색</a></li>
-                            <li><a href="../SubjectAnalysis/Index.html">교과분석</a></li>
-                            <li><a href="../NonSubjectAnalysis/Index.html">비교과분석</a></li>
-                            <li><a href="../DepartmentAnalysis/Index.html">학과분석</a></li>
-                            <li><a href="../EmploymentAnalysis/Index.html">취업분석</a></li>
-                            <li><a href="../RecruitAnalysis/Index.html">채용분석</a></li>
-                            <li><a href="../LectureHistoryAnalysis/Index.html">수강이력분석</a></li>
-                            <li><a href="../EducationStatistics/Index.html">교육지식통계현황</a></li>
-                        </ul>
-                        <!-- // gnb -->
-                    </nav>
-                    <div class="location">
-                        <span class="name">홍길동님</span>
-                        <span class="logout"><a href="#">로그아웃</a></span>
-                    </div>
+            <div class="header_wrap inner_wrap">
+                <h1 class="logo"><a href="../IntegrationSearch/index.html"><span class="icon">D-esk</span></a></h1>
+                <nav class="gnb">
+                    <!-- gnb -->
+                    <h2 class="skip">주메뉴</h2>
+                    <ul class="gnb_menu">
+                        <li><a href="../IntegrationSearch/Index.html">통합검색</a></li>
+                        <li class="active"><a href="../SubjectAnalysis/Index.html">교과분석</a></li>
+                        <li><a href="../NonSubjectAnalysis/Index.html">비교과분석</a></li>
+                        <li><a href="../DepartmentAnalysis/Index.html">학과분석</a></li>
+                        <li><a href="../EmploymentAnalysis/Index.html">취업분석</a></li>
+                        <li><a href="../RecruitAnalysis/Index.html">채용분석</a></li>
+                        <li><a href="../LectureHistoryAnalysis/Index.html">수강이력분석</a></li>
+                        <li><a href="../EducationStatistics/Index.html">교육지식통계현황</a></li>
+                    </ul>
+                    <!-- // gnb -->
+                </nav>
+                <div class="location">
+                    <span class="name">홍길동님</span>
+                    <span class="logout"><a href="#">로그아웃</a></span>
                 </div>
             </div>
         </header>
@@ -55,20 +58,118 @@
         <!-- container -->
         <div id="container">
             <div class="inner_wrap">
+                <!-- contents -->
                 <div class="contents_wrap">
-                    <!-- contents -->
-                    <div class="contents">
+                    <!-- 검색 영역 -->
+                    <div class="search_wrap">
+                        <!-- 검색바 -->
+                        <div class="search_area search_area01">
+                            <p class="search_box">
+                                <input type="text" class="form-control ui-autocomplete-input" id="AutoComplete" onclick="fn_KeywordPop()" placeholder="키워드(교과명 또는 토픽명)를 입력하세요.">
+                                <button type="button" class="btn_icon btn_search"><span>검색</span></button>
+                            </p>
+                            <p class="search_chk">
+                                <input type="checkbox" class="icon_chk" id="Rebrowsing" />
+                                <label for="Rebrowsing">결과 내 재검색</label>
+                            </p>
+                            <!-- 자동 완성 영역 -->
+                            <!-- 자동 완성 영역 위치값 및 스크롤 커스텀을 위한 구조니 변경하지 말아주세요.-->
+                            <div class="auto_complete_wrap">
+                                <!-- 검색어 삭제 버튼 이미지 임시로 추가해두었으니 참고 부탁드립니다. -->
+                                <!--<img src="../images/ico_close.png" alt="검색어 삭제" />
+                                <img src="../images/ico_close_xs.png" alt="검색어 삭제" />-->
+                                <div class="auto_complete_area">
+                                    <!-- 자동 완성 영역 ADD 되는 위치 -->
+                                    <ul class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front">
+                                        <li class="ui-menu-item">
+                                            <div id="ui-id-2" tabindex="-1" class="ui-menu-item-wrapper">교과목명을 입력하세요.</div>
+                                            <button type="button" class="btn_icon btn_key_del"><span>검색어 삭제</span></button>
+                                        </li>
+                                        <li class="ui-menu-item">
+                                            <div id="ui-id-3" tabindex="-1" class="ui-menu-item-wrapper">프로그램명을 입력하세요.</div>
+                                            <button type="button" class="btn_icon btn_key_del"><span>검색어 삭제</span></button>
+                                        </li>
+                                        <li class="ui-menu-item">
+                                            <div id="ui-id-4" tabindex="-1" class="ui-menu-item-wrapper">기업명을 입력하세요.</div>
+                                            <button type="button" class="btn_icon btn_key_del"><span>검색어 삭제</span></button>
+                                        </li>
+                                        <li class="ui-menu-item">
+                                            <div id="ui-id-5" tabindex="-1" class="ui-menu-item-wrapper">채용공고명을 입력하세요.</div>
+                                            <button type="button" class="btn_icon btn_key_del"><span>검색어 삭제</span></button>
+                                        </li>
+                                        <li class="ui-menu-item">
+                                            <div id="ui-id-6" tabindex="-1" class="ui-menu-item-wrapper">토픽명을 입력하세요.</div>
+                                            <button type="button" class="btn_icon btn_key_del"><span>검색어 삭제</span></button>
+                                        </li>
+                                        <li class="ui-menu-item">
+                                            <div id="ui-id-7" tabindex="-1" class="ui-menu-item-wrapper">논문/연구명을 입력하세요.</div>
+                                            <button type="button" class="btn_icon btn_key_del"><span>검색어 삭제</span></button>
+                                        </li>
+                                        <li class="ui-menu-item">
+                                            <div id="ui-id-8" tabindex="-1" class="ui-menu-item-wrapper">제목을 입력하세요.</div>
+                                            <button type="button" class="btn_icon btn_key_del"><span>검색어 삭제</span></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="auto_complete_footer">
+                                    <span>검색어 저장</span>
+                                    <strong>
+                                        <input type="checkbox" class="icon_chk icon_chk_noicon" id="KeywordSave" />
+                                        <label for="KeywordSave" onclick="fn_OnOff(this)">ON</label>
+                                    </strong>
+                                </div>
+                            </div>
+                            <!-- // 자동 완성 영역 -->
+                            <script>
+                                // 자동 완성 영역이 피시와 달라서 기존 라이브러리로 적용하지 않고 임시로 적용해두었습니다.
+                                // 자동 완성 라이브러리 적용시 mCustomScrollbar 라이브러리 적용 부탁드립니다.
+                                function fn_KeywordPop() {
+                                    autocomplete_scroll();
+                                    $(".auto_complete_wrap").show();
+                                }
+
+                                function autocomplete_scroll() {
+                                    $(".auto_complete_area").mCustomScrollbar({
+                                        theme: "dark"
+                                    });
+                                }
+
+                                // 자동 완성 영역 이외 클릭시 자동 완성 영역 닫히게
+                                $(document).mouseup(function (e) {
+                                    var filterPopup = $(".auto_complete_wrap");
+                                    if (filterPopup.has(e.target).length === 0) {
+                                        filterPopup.hide();
+                                    }
+                                });
+                            </script>
+                        </div>
+                        <!-- // 검색바 -->
+                        <!-- 검색 결과 -->
+                        <div class="result_wrap">
+                            <div class="count_area">
+                                <div class="keyword">
+                                    <p>검색어<strong>[교과분석 : #검색어#]</strong></p>
+                                    <p>총 0건 검색</p>
+                                </div>
+                                <div class="count">
+                                    <p>응답속도 : <strong>0</strong>초</p>
+                                    <p>검색수 : <strong>00</strong>건<span>(최근 30일 누적)</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // 검색 결과 -->
+                    </div>
+                    <!-- // 검색 영역 -->
+                    <div class="contents_area">
                         컨텐츠 영역
                     </div>
-                    <!-- // contents -->
                 </div>
+                <!-- // contents -->
             </div>
-        </div>
-        <!-- // container -->
-        <!-- footer -->
-        <footer id="footer">
-            <div class="footer_wrap">
-                <div class="inner_wrap">
+            <!-- // container -->
+            <!-- footer -->
+            <footer id="footer">
+                <div class="footer_wrap inner_wrap">
                     <h2 class="skip">푸터 메뉴</h2>
                     <h2 class="foot_logo"><a href="#"><span class="icon">EduAI</span></a></h2>
                     <div class="foot_info_wrap">
@@ -84,15 +185,16 @@
                         <p class="copy">Copyright&copy; BY DANKOOK UNIVERSITY. All rights reserved.</p>
                     </div>
                 </div>
+                <button type="button" class="btn_icon btn_dani" onclick="window.open('http://blucean.iptime.org:8301/')"><span>Dan.i PC 바로가기</span></button>
+                <button type="button" class="btn_icon btn_top"><span>상단으로 이동</span></button>
+            </footer>
+            <!-- // footer -->
+            <!-- Modal -->
+            <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <!-- 팝업 내용 -->
             </div>
-            <button type="button" class="btn_icon btn_top"><span>상단으로 이동</span></button>
-        </footer>
-        <!-- // footer -->
-        <!-- Modal -->
-        <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <!-- 팝업 내용 -->
+            <!-- // modal -->
         </div>
-        <!-- // modal -->
     </div>
 </body>
 </html>

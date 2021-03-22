@@ -1,7 +1,7 @@
 ﻿<html>
 <head>
     <meta charset="utf-8">
-    <title>통합검색</title>
+    <title>비교과분석</title>
     <meta name="description" content="D-esk">
     <meta name="keywords" content="D-esk">
     <meta property="og:title" content="D-esk">
@@ -23,11 +23,7 @@
     <link rel="stylesheet" type="text/css" href="../css/index.css" />
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
     <script type="text/javascript">
-        $(document).ready(function () {
-            $(".tab_scroll_area").mCustomScrollbar({
-                theme: "dark"
-            });
-        });
+
     </script>
     <!-- // page script -->
 </head>
@@ -41,9 +37,9 @@
                     <!-- gnb -->
                     <h2 class="skip">주메뉴</h2>
                     <ul class="gnb_menu">
-                        <li class="active"><a href="../IntegrationSearch/Index.html">통합검색</a></li>
+                        <li><a href="../IntegrationSearch/Index.html">통합검색</a></li>
                         <li><a href="../SubjectAnalysis/Index.html">교과분석</a></li>
-                        <li><a href="../NonSubjectAnalysis/Index.html">비교과분석</a></li>
+                        <li class="active"><a href="../NonSubjectAnalysis/Index.html">비교과분석</a></li>
                         <li><a href="../DepartmentAnalysis/Index.html">학과분석</a></li>
                         <li><a href="../EmploymentAnalysis/Index.html">취업분석</a></li>
                         <li><a href="../RecruitAnalysis/Index.html">채용분석</a></li>
@@ -67,27 +63,17 @@
                     <!-- 검색 영역 -->
                     <div class="search_wrap">
                         <!-- 검색바 -->
-                        <div class="search_area">
+                        <div class="search_area search_area01">
                             <p class="search_box">
-                                <select class="form-control select">
-                                    <option value="#">통합검색</option>
-                                    <option value="#">교과분석</option>
-                                    <option value="#">비교과분석</option>
-                                    <option value="#">채용분석</option>
-                                </select>
-                                <input type="text" class="form-control ui-autocomplete-input" id="AutoComplete" onclick="fn_KeywordPop()" placeholder="키워드를 입력하세요.">
+                                <input type="text" class="form-control ui-autocomplete-input" id="AutoComplete" onclick="fn_KeywordPop()" placeholder="키워드(비교과명 또는 토픽명)를 입력하세요.">
                                 <button type="button" class="btn_icon btn_search"><span>검색</span></button>
-                            </p>
-                            <p class="search_chk">
-                                <input type="checkbox" class="icon_chk" id="Rebrowsing" />
-                                <label for="Rebrowsing">결과 내 재검색</label>
                             </p>
                             <!-- 자동 완성 영역 -->
                             <!-- 자동 완성 영역 위치값 및 스크롤 커스텀을 위한 구조니 변경하지 말아주세요.-->
                             <div class="auto_complete_wrap">
                                 <!-- 검색어 삭제 버튼 이미지 임시로 추가해두었으니 참고 부탁드립니다. -->
                                 <!--<img src="../images/ico_close.png" alt="검색어 삭제" />
-                                <img src="../images/ico_close_xs.png" alt="검색어 삭제" />-->
+                            <img src="../images/ico_close_xs.png" alt="검색어 삭제" />-->
                                 <div class="auto_complete_area">
                                     <!-- 자동 완성 영역 ADD 되는 위치 -->
                                     <ul class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front">
@@ -158,7 +144,7 @@
                         <div class="result_wrap">
                             <div class="count_area">
                                 <div class="keyword">
-                                    <p>검색어<strong>[통합검색 : #검색어#]</strong></p>
+                                    <p>검색어<strong>[비교과분석 : #검색어#]</strong></p>
                                     <p>총 0건 검색</p>
                                 </div>
                                 <div class="count">
@@ -172,424 +158,174 @@
                     <!-- // 검색 영역 -->
                     <div class="contents_area">
                         <div class="filter_wrap">
-                            <ul class="filter_list">
+                            <ul class="filter_list filter_list01">
                                 <li>
-                                    <a href="#SubjectAnalysis" class="filter_tit">
-                                        <span class="txt">교과분석</span>
-                                        <span class="count">(154)</span>
-                                    </a>
-                                    <ul class="filter_sub_list">
+                                    <span class="filter_tit">
+                                        <span class="txt">분석 비교과 정보</span>
+                                        <span class="count">(279)</span>
+                                    </span>
+                                    <ul class="filter_sub_list filter_sub_list01">
                                         <li>
-                                            <span class="txt">연도별</span>
-                                            <span class="count">(154)</span>
+                                            <a href="#">
+                                                <span class="txt">영웅스토리</span>
+                                                <span class="count">(223)</span>
+                                            </a>
                                         </li>
                                         <li>
-                                            <span class="txt">과목별</span>
-                                            <span class="count">(50)</span>
+                                            <a href="#">
+                                                <span class="txt">:D-Mate</span>
+                                                <span class="count">(12)</span>
+                                            </a>
                                         </li>
                                         <li>
-                                            <span class="txt">학과/전공별</span>
-                                            <span class="count">(60)</span>
+                                            <a href="#">
+                                                <span class="txt">:D-MOOC</span>
+                                                <span class="count">(8)</span>
+                                            </a>
                                         </li>
                                         <li>
-                                            <span class="txt">인물별</span>
-                                            <span class="count">(40)</span>
+                                            <a href="#">
+                                                <span class="txt">KOCW</span>
+                                                <span class="count">(5)</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="txt">K-MOOC</span>
+                                                <span class="count">(5)</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="txt">주경야독</span>
+                                                <span class="count">(8)</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="txt">해커스</span>
+                                                <span class="count">(5)</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="txt">에듀윌</span>
+                                                <span class="count">(5)</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="txt">#EDWITH</span>
+                                                <span class="count">(4)</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="txt">#EDISON MOOC</span>
+                                                <span class="count">(3)</span>
+                                            </a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#NonSubjectAnalysis" class="filter_tit">
-                                        <span class="txt">비교과분석</span>
-                                        <span class="count">(531)</span>
-                                    </a>
-                                    <ul class="filter_sub_list">
+                                    <span class="filter_tit">
+                                        <span class="txt">실시간 비교과 정보</span>
+                                        <span class="count">(279)</span>
+                                    </span>
+                                    <ul class="filter_sub_list filter_sub_list01">
                                         <li>
-                                            <span class="txt">분석 비교과 정보</span>
-                                            <span class="count">(131)</span>
+                                            <a href="#">
+                                                <span class="txt">영웅스토리</span>
+                                                <span class="count">(223)</span>
+                                            </a>
                                         </li>
                                         <li>
-                                            <span class="txt">실시간 비교과 정보</span>
-                                            <span class="count">(400)</span>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#RecruitAnalysis" class="filter_tit">
-                                        <span class="txt">채용분석</span>
-                                        <span class="count">(1,123)</span>
-                                    </a>
-                                    <ul class="filter_sub_list">
-                                        <li>
-                                            <span class="txt">분석 채용 정보</span>
-                                            <span class="count">(523)</span>
+                                            <a href="#">
+                                                <span class="txt">:D-Mate</span>
+                                                <span class="count">(12)</span>
+                                            </a>
                                         </li>
                                         <li>
-                                            <span class="txt">실시간 채용 정보</span>
-                                            <span class="count">(600)</span>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#ResearchInfomation" class="filter_tit">
-                                        <span class="txt">논문/연구 정보</span>
-                                        <span class="count">(1,123)</span>
-                                    </a>
-                                    <ul class="filter_sub_list">
-                                        <li>
-                                            <span class="txt">RISS</span>
-                                            <span class="count">(523)</span>
+                                            <a href="#">
+                                                <span class="txt">:D-MOOC</span>
+                                                <span class="count">(8)</span>
+                                            </a>
                                         </li>
                                         <li>
-                                            <span class="txt">NTIS</span>
-                                            <span class="count">(600)</span>
+                                            <a href="#">
+                                                <span class="txt">KOCW</span>
+                                                <span class="count">(5)</span>
+                                            </a>
                                         </li>
                                         <li>
-                                            <span class="txt">NDSL</span>
-                                            <span class="count">(60)</span>
+                                            <a href="#">
+                                                <span class="txt">K-MOOC</span>
+                                                <span class="count">(5)</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="txt">주경야독</span>
+                                                <span class="count">(8)</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="txt">해커스</span>
+                                                <span class="count">(5)</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="txt">에듀윌</span>
+                                                <span class="count">(5)</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="txt">#EDWITH</span>
+                                                <span class="count">(4)</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="txt">#EDISON MOOC</span>
+                                                <span class="count">(3)</span>
+                                            </a>
                                         </li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
                         <div class="contents">
-                            <div class="cont_hd" id="SubjectAnalysis">
+                            <div class="cont_hd">
+                                <div class="cont_tit">
+                                    <h3><strong>연관 토픽 분석</strong></h3>
+                                </div>
+                            </div>
+                            <div class="chart_area">
+                                <p class="chart_info">검색어의 연관 토픽 분석 정보입니다. 토픽을 선택하시면 해당 토픽의 네트워크 분석 결과를 확인하실 수 있습니다. </p>
+                                <div class="chart_box">
+                                    <img src="../images/chart_ex_01.png" alt="차트 이미지" />
+                                </div>
+                            </div>
+                            <div class="cont_hd">
+                                <div class="cont_tit">
+                                    <h3><strong>토픽 네트워크 분석</strong></h3>
+                                </div>
+                            </div>
+                            <div class="chart_area">
+                                <div class="chart_box">
+                                    <img src="../images/chart_ex_02.png" alt="차트 이미지" />
+                                </div>
+                            </div>
+                            <div class="cont_hd">
                                 <div class="cont_tit">
                                     <h3>
-                                        <strong>교과분석</strong>
-                                        <span>(강의계획서 중심 2017-2019년)</span>
-                                    </h3>
-                                    <span class="count">[<strong class="text_blue">154</strong>건]</span>
-                                </div>
-                                <a href="../SubjectAnalysis/Index" class="a_btn a_btn_sky">교과분석에서 자세히보기</a>
-                            </div>
-                            <div class="filter_tab_area">
-                                <div class="tab_wrap" role="tabpanel">
-                                    <!-- Nav tabs -->
-                                    <ul class="nav tab_nav" role="tablist">
-                                        <li role="presentation"><a class="active" href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">연도별 (4)</a></li>
-                                        <li role="presentation"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">과목별 (4)</a></li>
-                                        <li role="presentation"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">학과/전공별 (60)</a></li>
-                                        <li role="presentation"><a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab">인물별 (40)</a></li>
-                                    </ul>
-                                    <!-- Tab panes -->
-                                    <div class="tab_scroll_area">
-                                        <div class="tab-content">
-                                            <div role="tabpanel" class="tab-pane active" id="tab1">
-                                                <ul class="tab_filter_list tab_filter_list04">
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">2019</span>
-                                                            <span class="count">(87)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">2018</span>
-                                                            <span class="count">(65)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">2018</span>
-                                                            <span class="count">(40)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">2016</span>
-                                                            <span class="count">(33)</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div role="tabpanel" class="tab-pane" id="tab2">
-                                                <ul class="filter_opt">
-                                                    <li class="active"><a href="#">검색량순</a></li>
-                                                    <li><a href="#">가나다순</a></li>
-                                                </ul>
-                                                <ul class="tab_filter_list tab_filter_list03">
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">글로벌중국어</span>
-                                                            <span class="count">(87)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">통계학</span>
-                                                            <span class="count">(87)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">교육행정및교육경영</span>
-                                                            <span class="count">(87)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">글로벌중국어</span>
-                                                            <span class="count">(87)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">통계학</span>
-                                                            <span class="count">(87)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">교육행정및교육경영</span>
-                                                            <span class="count">(87)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">글로벌중국어</span>
-                                                            <span class="count">(87)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">통계학</span>
-                                                            <span class="count">(87)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">교육행정및교육경영</span>
-                                                            <span class="count">(87)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">글로벌중국어</span>
-                                                            <span class="count">(87)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">통계학</span>
-                                                            <span class="count">(87)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">교육행정및교육경영</span>
-                                                            <span class="count">(87)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">글로벌중국어</span>
-                                                            <span class="count">(87)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">통계학</span>
-                                                            <span class="count">(87)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">교육행정및교육경영</span>
-                                                            <span class="count">(87)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">글로벌중국어</span>
-                                                            <span class="count">(87)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">통계학</span>
-                                                            <span class="count">(87)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">교육행정및교육경영</span>
-                                                            <span class="count">(87)</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div role="tabpanel" class="tab-pane" id="tab3">
-                                                <ul class="filter_opt">
-                                                    <li class="active"><a href="#">검색량순</a></li>
-                                                    <li><a href="#">가나다순</a></li>
-                                                </ul>
-                                                <ul class="tab_filter_list tab_filter_list03">
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">공공인재대학 경영학과(야)</span>
-                                                            <span class="count">(488)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">상경대학 경영학부 경영학전공</span>
-                                                            <span class="count">(478)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">경상대학 경영학부 경영학전공</span>
-                                                            <span class="count">(87)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">공공인재대학 경영학과(야)</span>
-                                                            <span class="count">(488)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">상경대학 경영학부 경영학전공</span>
-                                                            <span class="count">(478)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">경상대학 경영학부 경영학전공</span>
-                                                            <span class="count">(87)</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div role="tabpanel" class="tab-pane" id="tab4">
-                                                <ul class="filter_opt">
-                                                    <li class="active"><a href="#">검색량순</a></li>
-                                                    <li><a href="#">가나다순</a></li>
-                                                </ul>
-                                                <ul class="tab_filter_list tab_filter_list04">
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">이인경</span>
-                                                            <span class="count">(87)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">김수경</span>
-                                                            <span class="count">(65)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">김병남</span>
-                                                            <span class="count">(40)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">김영조</span>
-                                                            <span class="count">(33)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">이인경</span>
-                                                            <span class="count">(87)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">김수경</span>
-                                                            <span class="count">(65)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">김병남</span>
-                                                            <span class="count">(40)</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">
-                                                            <span class="txt">김영조</span>
-                                                            <span class="count">(33)</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab_select_area">
-                                        <ul class="tab_select_list">
-                                            <li><span>2019</span><button type="button" class="btn_icon btn_delete"><span>삭제</span></button></li>
-                                            <li><span>경영학원론</span><button type="button" class="btn_icon btn_delete"><span>삭제</span></button></li>
-                                        </ul>
-                                        <a href="#" class="reset">초기화</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cont_tbl_wrap">
-                                <div class="tbl_area">
-                                    <table class="tbl tbl_list">
-                                        <colgroup>
-                                            <col style="width:100%" />
-                                        </colgroup>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="subject_tit">
-                                                        <h4>경영정보론</h4>
-                                                        <span>(493870)</span>
-                                                        <span>2019년 1학기 1분반/전체 2분반</span>
-                                                        <a href="../LectureHistoryAnalysis/Index.thml" class="a_btn a_btn_sky">수강이력분석</a>
-                                                    </div>
-                                                    <div class="subject_con">
-                                                        <ul class="subject_con_list">
-                                                            <li>- 담당교수 : 양재춘</li>
-                                                            <li>
-                                                                - 주수강대상 :<br />
-                                                                상경대학 경영학부 경영학전공   2019년 2학년1학기   전공필수<br />
-                                                                상경대학 경영학부 회계학전공   2019년 2학년1학기   전공필수
-                                                            </li>
-                                                            <li>- 강의형태 : 이론강의, 토론 이론강의, 팀 발표, 토론</li>
-                                                            <li>
-                                                                - 교재정보 :<br />
-                                                                경영정보학개론  오재인  박영사 <span class="subject_btn"><a href="#" class="a_btn a_btn_lightgray" target="_blank">교내도서관</a><a href="#" class="a_btn a_btn_lightgray" target="_blank">교보문고</a></span><br />
-                                                                MIS8 Student Edition  Hossein BIDGOLI.PH.D.  4LTR PRESS,Cengage<span class="subject_btn"><a href="#" class="a_btn a_btn_lightgray" target="_blank">교내도서관</a><a href="#" class="a_btn a_btn_lightgray" target="_blank">교보문고</a></span>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="td_dash">
-                                                    <dl>
-                                                        <dt>교과정보</dt>
-                                                        <dd>
-                                                            <span class="subject_btn">
-                                                                <a href="#Pop_LecturePlan" class="a_btn a_btn_gray" data-toggle="modal">강의계획서</a>
-                                                                <a href="#Pop_TopicAnalysis" class="a_btn a_btn_gray" data-toggle="modal">토픽분석</a>
-                                                            </span>
-                                                        </dd>
-                                                    </dl>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <p class="more">
-                                    <a href="#">더보기 (5/00)</a>
-                                </p>
-                            </div>
-                            <div class="cont_hd" id="NonSubjectAnalysis">
-                                <div class="cont_tit">
-                                    <h3>
-                                        <strong>비교과분석</strong>
+                                        <strong>연관 비교과목 정보</strong>
                                     </h3>
                                     <span class="count">[<strong class="text_blue">531</strong>건]</span>
                                 </div>
-                                <a href="../NonSubjectAnalysis/Index" class="a_btn a_btn_sky">비교과분석에서 자세히보기</a>
                             </div>
                             <div class="main_tab_area">
                                 <p class="tab_info">
@@ -618,9 +354,60 @@
                                                 <li role="presentation"><a href="#NonSubject_tab10" aria-controls="NonSubject_tab10" role="tab" data-toggle="tab">EDISON MOOC (3)</a></li>
                                             </ul>
                                             <!-- Tab panes -->
+
                                             <div class="tab-content">
                                                 <div role="tabpanel" class="tab-pane active" id="NonSubject_tab1">
+                                                    <div class="filter_search_wrap">
+                                                        <dl class="filter_search_area">
+                                                            <dt>6대 핵심역량</dt>
+                                                            <dd>
+                                                                <ul class="filter_sub_list">
+                                                                    <li class="active">자기주도</li>
+                                                                    <li>의사소통</li>
+                                                                    <li>문제해결</li>
+                                                                    <li>전문지식</li>
+                                                                    <li>세계시민</li>
+                                                                    <li>협력·헌신</li>
+                                                                </ul>
+                                                            </dd>
+                                                            <dt>운영조직</dt>
+                                                            <dd>
+                                                                <ul class="filter_sel_list">
+                                                                    <li>
+                                                                        <select class="form-control select">
+                                                                            <option value="#">대학/부속·부설기관</option>
+                                                                        </select>
+                                                                    </li>
+                                                                    <li>
+                                                                        <select class="form-control select">
+                                                                            <option value="#">담당 부서</option>
+                                                                        </select>
+                                                                    </li>
+                                                                    <li>
+                                                                        <select class="form-control select">
+                                                                            <option value="#">운영 캠퍼스</option>
+                                                                        </select>
+                                                                    </li>
+                                                                </ul>
+                                                            </dd>
+                                                        </dl>
+                                                    </div>
                                                     <div class="cont_tbl_wrap">
+                                                        <div class="list_title_area flex_end">
+                                                            <div class="control_wrap">
+                                                                <p class="sel_area">
+                                                                    <label for="division">신청구분</label>
+                                                                    <select class="form-control select" id="division">
+                                                                        <option value="#">전체</option>
+                                                                        <option value="#">신청가능</option>
+                                                                        <option value="#">마감</option>
+                                                                    </select>
+                                                                </p>
+                                                                <div class="filter_icon">
+                                                                    <span class="icon_after" onclick="fn_Toggle(this);">마감일</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         <div class="tbl_area">
                                                             <table class="tbl tbl_list">
                                                                 <colgroup>
@@ -655,13 +442,28 @@
                                                                 </tbody>
                                                             </table>
                                                         </div>
-                                                        <p class="more">
-                                                            <a href="#">더보기 (5/00)</a>
-                                                        </p>
+                                                        <div class="paging_area">
+                                                            <ul class="paging">
+                                                                <li class="page_prev"><a href="#"><span class="icon">이전 페이지로 이동</span></a></li>
+                                                                <li class="active"><a href="#none">1</a></li>
+                                                                <li><a href="#">2</a></li>
+                                                                <li><a href="#">3</a></li>
+                                                                <li><a href="#">4</a></li>
+                                                                <li><a href="#">5</a></li>
+                                                                <li class="page_next"><a href="#"><span class="icon">다음 페이지로 이동</span></a></li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div role="tabpanel" class="tab-pane" id="NonSubject_tab2">
                                                     <div class="cont_tbl_wrap">
+                                                        <div class="list_title_area flex_end">
+                                                            <div class="control_wrap">
+                                                                <div class="filter_icon">
+                                                                    <span class="icon_after active" onclick="fn_Toggle(this);">콘텐츠명</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         <div class="tbl_area">
                                                             <table class="tbl tbl_list">
                                                                 <colgroup>
@@ -693,9 +495,17 @@
                                                                 </tbody>
                                                             </table>
                                                         </div>
-                                                        <p class="more">
-                                                            <a href="#">더보기 (5/00)</a>
-                                                        </p>
+                                                        <div class="paging_area">
+                                                            <ul class="paging">
+                                                                <li class="page_prev"><a href="#"><span class="icon">이전 페이지로 이동</span></a></li>
+                                                                <li class="active"><a href="#none">1</a></li>
+                                                                <li><a href="#">2</a></li>
+                                                                <li><a href="#">3</a></li>
+                                                                <li><a href="#">4</a></li>
+                                                                <li><a href="#">5</a></li>
+                                                                <li class="page_next"><a href="#"><span class="icon">다음 페이지로 이동</span></a></li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -708,7 +518,57 @@
                                             </ul>
                                             <div class="tab-content">
                                                 <div role="tabpanel" class="tab-pane active" id="NonSubject1_tab1">
+                                                    <div class="filter_search_wrap">
+                                                        <dl class="filter_search_area">
+                                                            <dt>6대 핵심역량</dt>
+                                                            <dd>
+                                                                <ul class="filter_sub_list">
+                                                                    <li class="active">자기주도</li>
+                                                                    <li>의사소통</li>
+                                                                    <li>문제해결</li>
+                                                                    <li>전문지식</li>
+                                                                    <li>세계시민</li>
+                                                                    <li>협력·헌신</li>
+                                                                </ul>
+                                                            </dd>
+                                                            <dt>운영조직</dt>
+                                                            <dd>
+                                                                <ul class="filter_sel_list">
+                                                                    <li>
+                                                                        <select class="form-control select">
+                                                                            <option value="#">대학/부속·부설기관</option>
+                                                                        </select>
+                                                                    </li>
+                                                                    <li>
+                                                                        <select class="form-control select">
+                                                                            <option value="#">담당 부서</option>
+                                                                        </select>
+                                                                    </li>
+                                                                    <li>
+                                                                        <select class="form-control select">
+                                                                            <option value="#">운영 캠퍼스</option>
+                                                                        </select>
+                                                                    </li>
+                                                                </ul>
+                                                            </dd>
+                                                        </dl>
+                                                    </div>
                                                     <div class="cont_tbl_wrap">
+                                                        <div class="list_title_area flex_end">
+                                                            <div class="control_wrap">
+                                                                <p class="sel_area">
+                                                                    <label for="division">신청구분</label>
+                                                                    <select class="form-control select" id="division">
+                                                                        <option value="#">전체</option>
+                                                                        <option value="#">신청가능</option>
+                                                                        <option value="#">마감</option>
+                                                                    </select>
+                                                                </p>
+                                                                <div class="filter_icon">
+                                                                    <span class="icon_after" onclick="fn_Toggle(this);">마감일</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         <div class="tbl_area">
                                                             <table class="tbl tbl_list">
                                                                 <colgroup>
@@ -737,13 +597,28 @@
                                                                 </tbody>
                                                             </table>
                                                         </div>
-                                                        <p class="more">
-                                                            <a href="#">더보기 (5/00)</a>
-                                                        </p>
+                                                        <div class="paging_area">
+                                                            <ul class="paging">
+                                                                <li class="page_prev"><a href="#"><span class="icon">이전 페이지로 이동</span></a></li>
+                                                                <li class="active"><a href="#none">1</a></li>
+                                                                <li><a href="#">2</a></li>
+                                                                <li><a href="#">3</a></li>
+                                                                <li><a href="#">4</a></li>
+                                                                <li><a href="#">5</a></li>
+                                                                <li class="page_next"><a href="#"><span class="icon">다음 페이지로 이동</span></a></li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div role="tabpanel" class="tab-pane" id="NonSubject1_tab2">
                                                     <div class="cont_tbl_wrap">
+                                                        <div class="list_title_area flex_end">
+                                                            <div class="control_wrap">
+                                                                <div class="filter_icon">
+                                                                    <span class="icon_after active" onclick="fn_Toggle(this);">콘텐츠명</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                         <div class="tbl_area">
                                                             <table class="tbl tbl_list">
                                                                 <colgroup>
@@ -769,287 +644,21 @@
                                                                 </tbody>
                                                             </table>
                                                         </div>
-                                                        <p class="more">
-                                                            <a href="#">더보기 (5/00)</a>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cont_hd" id="RecruitAnalysis">
-                                <div class="cont_tit">
-                                    <h3>
-                                        <strong>채용분석</strong>
-                                    </h3>
-                                    <span class="count">[<strong class="text_blue">1,123</strong>건]</span>
-                                </div>
-                                <a href="../RecruitAnalysis/Index" class="a_btn a_btn_sky">채용분석에서 자세히보기</a>
-                            </div>
-                            <div class="main_tab_area">
-                                <div class="tab_wrap" role="tabpanel">
-                                    <!-- Nav tabs -->
-                                    <ul class="nav main_tab_nav main_tab_nav02" role="tablist">
-                                        <li role="presentation"><a class="active" href="#Recruit_tab1" aria-controls="Recruit_tab1" role="tab" data-toggle="tab">분석 채용정보 <span>[<span>400</span>]</span></a></li>
-                                        <li role="presentation"><a href="#Recruit_tab2" aria-controls="Recruit_tab2" role="tab" data-toggle="tab">실시간 채용정보 <span>[<span>400</span>]</span></a></li>
-                                    </ul>
-                                    <!-- Tab panes -->
-                                    <div class="tab-content">
-                                        <div role="tabpanel" class="tab-pane active" id="Recruit_tab1">
-                                            <div class="tab_wrap" role="tabpanel">
-                                                <!-- Nav tabs -->
-                                                <ul class="nav tab_nav tab_nav02" role="tablist">
-                                                    <li role="presentation"><a class="active" href="#Recruit_sub_tab1" aria-controls="Recruit_sub_tab1" role="tab" data-toggle="tab">영웅스토리 추천 (4)</a></li>
-                                                    <li role="presentation"><a href="#Recruit_sub_tab2" aria-controls="Recruit_sub_tab2" role="tab" data-toggle="tab">영웅스토리 일반 (4)</a></li>
-                                                </ul>
-                                                <!-- Tab panes -->
-                                                <div class="tab-content">
-                                                    <div role="tabpanel" class="tab-pane active" id="Recruit_sub_tab1">
-                                                        <div class="cont_tbl_wrap">
-                                                            <div class="tbl_area">
-                                                                <table class="tbl tbl_list">
-                                                                    <colgroup>
-                                                                        <col style="width:150px" />
-                                                                        <col style="width:auto" />
-                                                                        <col style="width:130px" />
-                                                                    </colgroup>
-                                                                    <thead>
-                                                                        <tr>
-                                                                            <th scope="col" class="center">회사명</th>
-                                                                            <th scope="col">공고명</th>
-                                                                            <th scope="col" class="center">마감일</th>
-                                                                        </tr>
-                                                                    </thead>
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td class="center"><span class="category" title="(주)티아이씨">(주)티아이씨</span></td>
-                                                                            <td>
-                                                                                <div class="td_title">
-                                                                                    <a href="#" target="_blank" class="main_title" title="(주)티아이씨 추천채용 안내">(주)티아이씨 추천채용 안내</a>
-                                                                                    <span class="sub_title" title="죽전  |  충남  |  전자/기계/기술/화학/연구개발">죽전  |  충남  |  전자/기계/기술/화학/연구개발</span>
-                                                                                    <span class="tbl_btn">
-                                                                                        <a href="#Pop_TopicAnalysis" class="a_btn a_btn_gray" data-toggle="modal">토픽분석</a>
-                                                                                    </span>
-                                                                                </div>
-                                                                            </td>
-                                                                            <td class="center">2020.12.28</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </div>
-                                                            <p class="more">
-                                                                <a href="#">더보기 (5/00)</a>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div role="tabpanel" class="tab-pane" id="Recruit_sub_tab1">
-                                                        <div class="cont_tbl_wrap">
-                                                            <div class="tbl_area">
-                                                                <table class="tbl tbl_list">
-                                                                    <colgroup>
-                                                                        <col style="width:150px" />
-                                                                        <col style="width:auto" />
-                                                                        <col style="width:130px" />
-                                                                    </colgroup>
-                                                                    <thead>
-                                                                        <tr>
-                                                                            <th scope="col" class="center">회사명</th>
-                                                                            <th scope="col">공고명</th>
-                                                                            <th scope="col" class="center">마감일</th>
-                                                                        </tr>
-                                                                    </thead>
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td class="center"><span class="category" title="(주)티아이씨">(주)티아이씨</span></td>
-                                                                            <td>
-                                                                                <div class="td_title">
-                                                                                    <a href="#" target="_blank" class="main_title" title="(주)티아이씨 추천채용 안내">(주)티아이씨 추천채용 안내</a>
-                                                                                    <span class="sub_title" title="죽전  |  충남  |  전자/기계/기술/화학/연구개발">죽전  |  충남  |  전자/기계/기술/화학/연구개발</span>
-                                                                                    <span class="tbl_btn">
-                                                                                        <a href="#Pop_TopicAnalysis" class="a_btn a_btn_gray" data-toggle="modal">토픽분석</a>
-                                                                                    </span>
-                                                                                </div>
-                                                                            </td>
-                                                                            <td class="center">2020.12.28</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </div>
-                                                            <p class="more">
-                                                                <a href="#">더보기 (5/00)</a>
-                                                            </p>
+                                                        <div class="paging_area">
+                                                            <ul class="paging">
+                                                                <li class="page_prev"><a href="#"><span class="icon">이전 페이지로 이동</span></a></li>
+                                                                <li class="active"><a href="#none">1</a></li>
+                                                                <li><a href="#">2</a></li>
+                                                                <li><a href="#">3</a></li>
+                                                                <li><a href="#">4</a></li>
+                                                                <li><a href="#">5</a></li>
+                                                                <li class="page_next"><a href="#"><span class="icon">다음 페이지로 이동</span></a></li>
+                                                            </ul>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                        </div>
-                                        <div role="tabpanel" class="tab-pane" id="Recruit_tab2">
-                                            <!-- Nav tabs -->
-                                            <ul class="nav tab_nav tab_nav04" role="tablist">
-                                                <li role="presentation"><a class="active" href="#Recruit1_sub_tab1" aria-controls="Recruit1_sub_tab1" role="tab" data-toggle="tab">영웅스토리 추천 (4)</a></li>
-                                                <li role="presentation"><a href="#Recruit1_sub_tab2" aria-controls="Recruit1_sub_tab2" role="tab" data-toggle="tab">잡코리아 (4)</a></li>
-                                                <li role="presentation"><a href="#Recruit1_sub_tab3" aria-controls="Recruit1_sub_tab3" role="tab" data-toggle="tab">사람인 (4)</a></li>
-                                                <li role="presentation"><a href="#Recruit1_sub_tab4" aria-controls="Recruit1_sub_tab4" role="tab" data-toggle="tab">워크넷 (4)</a></li>
-                                            </ul>
-                                            <!-- Tab panes -->
-                                            <div class="tab-content">
-                                                <div role="tabpanel" class="tab-pane active" id="Recruit1_sub_tab1">
-                                                    <div class="cont_tbl_wrap">
-                                                        <div class="tbl_area">
-                                                            <table class="tbl tbl_list">
-                                                                <colgroup>
-                                                                    <col style="width:150px" />
-                                                                    <col style="width:auto" />
-                                                                    <col style="width:130px" />
-                                                                </colgroup>
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th scope="col" class="center">회사명</th>
-                                                                        <th scope="col">공고명</th>
-                                                                        <th scope="col" class="center">마감일</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td class="center"><span class="category" title="(주)이지캠">(주)이지캠</span></td>
-                                                                        <td>
-                                                                            <div class="td_title">
-                                                                                <a href="#" target="_blank" class="main_title" title="[(주)이지캠]경영지원팀 주식/회계 신입사원 채용공고">[(주)이지캠]경영지원팀 주식/회계 신입사원 채용공고</a>
-                                                                                <span class="sub_title" title="공통  |  충북  |  재무/회계/경리">공통  |  충북  |  재무/회계/경리</span>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="center">2020.12.28</td>
-                                                                    </tr>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                        <p class="more">
-                                                            <a href="#">더보기 (5/00)</a>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cont_hd" id="ResearchInfomation">
-                                <div class="cont_tit">
-                                    <h3>
-                                        <strong>논문/연구정보</strong>
-                                    </h3>
-                                    <span class="count">[<strong class="text_blue">140</strong>건]</span>
-                                </div>
-                            </div>
-                            <div class="filter_tab_area filter_tab_area01">
-                                <div class="tab_wrap" role="tabpanel">
-                                    <!-- Nav tabs -->
-                                    <ul class="nav tab_nav tab_nav03" role="tablist">
-                                        <li role="presentation"><a class="active" href="#Research_tab1" aria-controls="Research_tab1" role="tab" data-toggle="tab">RISS (4)</a></li>
-                                        <li role="presentation"><a href="#Research_tab2" aria-controls="Research_tab2" role="tab" data-toggle="tab">NTIS (4)</a></li>
-                                        <li role="presentation"><a href="#Research_tab3" aria-controls="Research_tab3" role="tab" data-toggle="tab">NDSL (60)</a></li>
-                                    </ul>
-                                    <!-- Tab panes -->
-                                    <div class="tab-content">
-                                        <div role="tabpanel" class="tab-pane active" id="Research_tab1">
-                                            <div class="cont_tbl_wrap">
-                                                <div class="tbl_area">
-                                                    <table class="tbl tbl_list">
-                                                        <colgroup>
-                                                            <col style="width:150px" />
-                                                            <col style="width:auto" />
-                                                        </colgroup>
-                                                        <thead>
-                                                            <tr>
-                                                                <th scope="col" class="center">구분</th>
-                                                                <th scope="col">논문명</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td class="center"><span class="category" title="국내학술논문">국내학술논문</span></td>
-                                                                <td>
-                                                                    <div class="td_title">
-                                                                        <a href="#" target="_blank" class="main_title" title="공익연계마케팅에 대한 손실 지각과 기부 프레이밍이 소비자 태도에 미치는 효과">공익연계마케팅에 대한 손실 지각과 기부 프레이밍이 소비자 태도에 미치는 효과</a>
-                                                                        <span class="sub_title" title="이희욱,이경탁 | 2017">이희욱,이경탁 | 2017</span>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                                <p class="more">
-                                                    <a href="#">더보기 (5/00)</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div role="tabpanel" class="tab-pane" id="Research_tab2">
-                                            <div class="cont_tbl_wrap">
-                                                <div class="tbl_area">
-                                                    <table class="tbl tbl_list">
-                                                        <colgroup>
-                                                            <col style="width:150px" />
-                                                            <col style="width:auto" />
-                                                        </colgroup>
-                                                        <thead>
-                                                            <tr>
-                                                                <th scope="col" class="center">구분</th>
-                                                                <th scope="col">논문명</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td class="center"><span class="category" title="국내학술논문">국내학술논문</span></td>
-                                                                <td>
-                                                                    <div class="td_title">
-                                                                        <a href="#" target="_blank" class="main_title" title="공익연계마케팅에 대한 손실 지각과 기부 프레이밍이 소비자 태도에 미치는 효과">공익연계마케팅에 대한 손실 지각과 기부 프레이밍이 소비자 태도에 미치는 효과</a>
-                                                                        <span class="sub_title" title="이희욱,이경탁 | 2017">이희욱,이경탁 | 2017</span>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                                <p class="more">
-                                                    <a href="#">더보기 (5/00)</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div role="tabpanel" class="tab-pane" id="Research_tab3">
-                                            <div class="cont_tbl_wrap">
-                                                <div class="tbl_area">
-                                                    <table class="tbl tbl_list">
-                                                        <colgroup>
-                                                            <col style="width:150px" />
-                                                            <col style="width:auto" />
-                                                        </colgroup>
-                                                        <thead>
-                                                            <tr>
-                                                                <th scope="col" class="center">구분</th>
-                                                                <th scope="col">논문명</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td class="center"><span class="category" title="국내학술논문">국내학술논문</span></td>
-                                                                <td>
-                                                                    <div class="td_title">
-                                                                        <a href="#" target="_blank" class="main_title" title="공익연계마케팅에 대한 손실 지각과 기부 프레이밍이 소비자 태도에 미치는 효과">공익연계마케팅에 대한 손실 지각과 기부 프레이밍이 소비자 태도에 미치는 효과</a>
-                                                                        <span class="sub_title" title="이희욱,이경탁 | 2017">이희욱,이경탁 | 2017</span>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                                <p class="more">
-                                                    <a href="#">더보기 (5/00)</a>
-                                                </p>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1093,16 +702,16 @@
                         <button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><span>팝업 창 닫기</span></button>
                     </div>
                     <div class="modal_body">
-                        <!--<div class="chart_area">
+                        <div class="chart_area">
                             <img src="../images/chart_ex_02.png" alt="차트 이미지 임시 적용" />
-                        </div>-->
+                        </div>
                         <!-- NULL  -->
-                        <span class="sub_tab_none">
-                            <span>
-                                토픽정보는 아직 분석되지 않았습니다.<br />
-                                추후 반영될 예정입니다.
-                            </span>
+                        <!--<span class="sub_tab_none">
+                        <span>
+                            토픽정보는 아직 분석되지 않았습니다.<br />
+                            추후 반영될 예정입니다.
                         </span>
+                    </span>-->
                         <!-- // NULL  -->
                     </div>
                 </div>
@@ -1178,11 +787,11 @@
                         </div>
                         <!-- NULL  -->
                         <!--<span class="sub_tab_none">
-                                <span>
-                                    연관 교과 정보는 아직 분석되지 않았습니다.<br/>
-                                    추후 반영될 예정입니다.
-                            </span>
-                        </span>-->
+                            <span>
+                                연관 교과 정보는 아직 분석되지 않았습니다.<br/>
+                                추후 반영될 예정입니다.
+                        </span>
+                    </span>-->
                         <!-- // NULL  -->
                     </div>
                 </div>
@@ -1318,54 +927,11 @@
                                                 </div>
                                             </div>
                                             <div role="tabpanel" class="tab-pane" id="Pop_NonSubject_tab2">
-                                                <div class="filter_search_wrap">
-                                                    <dl class="filter_search_area">
-                                                        <dt>6대 핵심역량</dt>
-                                                        <dd>
-                                                            <ul class="filter_sub_list">
-                                                                <li class="active">자기주도</li>
-                                                                <li>의사소통</li>
-                                                                <li>문제해결</li>
-                                                                <li>전문지식</li>
-                                                                <li>세계시민</li>
-                                                                <li>협력·헌신</li>
-                                                            </ul>
-                                                        </dd>
-                                                        <dt>운영조직</dt>
-                                                        <dd>
-                                                            <ul class="filter_sel_list">
-                                                                <li>
-                                                                    <select class="form-control select">
-                                                                        <option value="#">대학/부속·부설기관</option>
-                                                                    </select>
-                                                                </li>
-                                                                <li>
-                                                                    <select class="form-control select">
-                                                                        <option value="#">담당 부서</option>
-                                                                    </select>
-                                                                </li>
-                                                                <li>
-                                                                    <select class="form-control select">
-                                                                        <option value="#">운영 캠퍼스</option>
-                                                                    </select>
-                                                                </li>
-                                                            </ul>
-                                                        </dd>
-                                                    </dl>
-                                                </div>
                                                 <div class="cont_tbl_wrap">
                                                     <div class="list_title_area flex_end">
                                                         <div class="control_wrap">
-                                                            <p class="sel_area">
-                                                                <label for="division">신청구분</label>
-                                                                <select class="form-control select" id="division">
-                                                                    <option value="#">전체</option>
-                                                                    <option value="#">신청가능</option>
-                                                                    <option value="#">마감</option>
-                                                                </select>
-                                                            </p>
                                                             <div class="filter_icon">
-                                                                <span class="icon_after" onclick="fn_Toggle(this);">마감일</span>
+                                                                <span class="icon_after active" onclick="fn_Toggle(this);">콘텐츠명</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1412,11 +978,11 @@
                                             </div>
                                             <!-- NULL  -->
                                             <!--<span class="sub_tab_none sub_tab_none01">
-                                                <span>
-                                                    연관 비교과 정보는 아직 분석되지 않았습니다.<br/>
-                                                    추후 반영될 예정입니다.
-                                                </span>
-                                            </span>-->
+                                            <span>
+                                                연관 비교과 정보는 아직 분석되지 않았습니다.<br/>
+                                                추후 반영될 예정입니다.
+                                            </span>
+                                        </span>-->
                                             <!-- // NULL  -->
                                         </div>
 
@@ -1521,54 +1087,11 @@
                                                 </div>
                                             </div>
                                             <div role="tabpanel" class="tab-pane" id="Pop_NonSubject1_tab2">
-                                                <div class="filter_search_wrap">
-                                                    <dl class="filter_search_area">
-                                                        <dt>6대 핵심역량</dt>
-                                                        <dd>
-                                                            <ul class="filter_sub_list">
-                                                                <li class="active">자기주도</li>
-                                                                <li>의사소통</li>
-                                                                <li>문제해결</li>
-                                                                <li>전문지식</li>
-                                                                <li>세계시민</li>
-                                                                <li>협력·헌신</li>
-                                                            </ul>
-                                                        </dd>
-                                                        <dt>운영조직</dt>
-                                                        <dd>
-                                                            <ul class="filter_sel_list">
-                                                                <li>
-                                                                    <select class="form-control select">
-                                                                        <option value="#">대학/부속·부설기관</option>
-                                                                    </select>
-                                                                </li>
-                                                                <li>
-                                                                    <select class="form-control select">
-                                                                        <option value="#">담당 부서</option>
-                                                                    </select>
-                                                                </li>
-                                                                <li>
-                                                                    <select class="form-control select">
-                                                                        <option value="#">운영 캠퍼스</option>
-                                                                    </select>
-                                                                </li>
-                                                            </ul>
-                                                        </dd>
-                                                    </dl>
-                                                </div>
                                                 <div class="cont_tbl_wrap">
                                                     <div class="list_title_area flex_end">
                                                         <div class="control_wrap">
-                                                            <p class="sel_area">
-                                                                <label for="division">신청구분</label>
-                                                                <select class="form-control select" id="division">
-                                                                    <option value="#">전체</option>
-                                                                    <option value="#">신청가능</option>
-                                                                    <option value="#">마감</option>
-                                                                </select>
-                                                            </p>
                                                             <div class="filter_icon">
-                                                                <span class="icon_after" onclick="fn_Toggle(this);">마감일</span>
+                                                                <span class="icon_after active" onclick="fn_Toggle(this);">콘텐츠명</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1614,10 +1137,10 @@
                                         </div>
                                         <!-- NULL  -->
                                         <!--<span class="sub_tab_none sub_tab_none01">
-                                            <span>
-                                                연관 비교과 정보가 없습니다.
-                                            </span>
-                                        </span>-->
+                                        <span>
+                                            연관 비교과 정보가 없습니다.
+                                        </span>
+                                    </span>-->
                                         <!-- // NULL  -->
                                     </div>
                                 </div>
@@ -1778,11 +1301,11 @@
                                             </div>
                                             <!-- NULL  -->
                                             <!--<span class="sub_tab_none sub_tab_none01">
-                                                <span>
-                                                    연관 채용 정보는 아직 분석되지 않았습니다.<br>
-                                                    추후 반영될 예정입니다.
-                                                </span>
-                                            </span>-->
+                                            <span>
+                                                연관 채용 정보는 아직 분석되지 않았습니다.<br>
+                                                추후 반영될 예정입니다.
+                                            </span>
+                                        </span>-->
                                             <!-- // NULL  -->
                                         </div>
                                         <!-- Tab panes -->
@@ -1919,12 +1442,12 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                             <!-- NULL  -->
+                                            <!-- NULL  -->
                                             <!--<span class="sub_tab_none sub_tab_none01">
-                                                <span>
-                                                    연관 채용 정보가 없습니다.
-                                                </span>
-                                            </span>-->
+                                            <span>
+                                                연관 채용 정보가 없습니다.
+                                            </span>
+                                        </span>-->
                                             <!-- // NULL  -->
                                         </div>
                                         <!-- Tab panes -->
@@ -1937,7 +1460,7 @@
             </div>
         </div>
         <!-- // 연관 채용정보 팝업 -->
-        <!-- // Modal -->
+        <!-- // modal -->
     </div>
 </body>
 </html>

@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="../css/lib/jquery-ui-1.12.1.min.css">
     <link rel="stylesheet" href="../css/lib/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
     <script type="text/javascript">
 
     </script>
@@ -67,16 +68,12 @@
                                 <input type="text" class="form-control ui-autocomplete-input" id="AutoComplete" onclick="fn_KeywordPop()" placeholder="키워드(교과명 또는 토픽명)를 입력하세요.">
                                 <button type="button" class="btn_icon btn_search"><span>검색</span></button>
                             </p>
-                            <p class="search_chk">
-                                <input type="checkbox" class="icon_chk" id="Rebrowsing" />
-                                <label for="Rebrowsing">결과 내 재검색</label>
-                            </p>
                             <!-- 자동 완성 영역 -->
                             <!-- 자동 완성 영역 위치값 및 스크롤 커스텀을 위한 구조니 변경하지 말아주세요.-->
                             <div class="auto_complete_wrap">
                                 <!-- 검색어 삭제 버튼 이미지 임시로 추가해두었으니 참고 부탁드립니다. -->
                                 <!--<img src="../images/ico_close.png" alt="검색어 삭제" />
-                                <img src="../images/ico_close_xs.png" alt="검색어 삭제" />-->
+                            <img src="../images/ico_close_xs.png" alt="검색어 삭제" />-->
                                 <div class="auto_complete_area">
                                     <!-- 자동 완성 영역 ADD 되는 위치 -->
                                     <ul class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front">
@@ -295,7 +292,7 @@
                                             <a href="#">
                                                 <span class="txt">나진성</span>
                                                 <span class="count">(8)</span>
-                                                </a>
+                                            </a>
                                         </li>
                                     </ul>
                                 </li>
@@ -333,36 +330,36 @@
                     </div>
                 </div>
                 <!-- // contents -->
-                <button type="button" class="btn_icon btn_top"><span>상단으로 이동</span></button>
             </div>
-            <!-- // container -->
-            <!-- footer -->
-            <footer id="footer">
-                <div class="footer_wrap inner_wrap">
-                    <h2 class="skip">푸터 메뉴</h2>
-                    <h2 class="foot_logo"><a href="#"><span class="icon">EduAI</span></a></h2>
-                    <div class="foot_info_wrap">
-                        <p class="center">
-                            <strong class="ft_gong_400">미래교육혁신원 EduAI센터</strong>
-                            <span class="ft_gong_300">Innovation Institute for Future Education EduAI Center</span>
-
-                        </p>
-                        <address class="address">
-                            <strong>죽전캠퍼스</strong>
-                            <span>(우) 16890 경기도 용인시 수지구 죽전로 152 범정관 117-1호 EduAI센터</span>
-                        </address>
-                        <p class="copy">Copyright&copy; BY DANKOOK UNIVERSITY. All rights reserved.</p>
-                    </div>
-                </div>
-                <button type="button" class="btn_icon btn_dani" onclick="window.open('http://blucean.iptime.org:8301/')"><span>Dan.i PC 바로가기</span></button>
-            </footer>
-            <!-- // footer -->
-            <!-- Modal -->
-            <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <!-- 팝업 내용 -->
-            </div>
-            <!-- // modal -->
         </div>
+        <!-- // container -->
+        <!-- footer -->
+        <footer id="footer">
+            <div class="footer_wrap inner_wrap">
+                <h2 class="skip">푸터 메뉴</h2>
+                <h2 class="foot_logo"><a href="#"><span class="icon">EduAI</span></a></h2>
+                <div class="foot_info_wrap">
+                    <p class="center">
+                        <strong class="ft_gong_400">미래교육혁신원 EduAI센터</strong>
+                        <span class="ft_gong_300">Innovation Institute for Future Education EduAI Center</span>
+
+                    </p>
+                    <address class="address">
+                        <strong>죽전캠퍼스</strong>
+                        <span>(우) 16890 경기도 용인시 수지구 죽전로 152 범정관 117-1호 EduAI센터</span>
+                    </address>
+                    <p class="copy">Copyright&copy; BY DANKOOK UNIVERSITY. All rights reserved.</p>
+                </div>
+            </div>
+            <button type="button" class="btn_icon btn_dani" onclick="window.open('http://blucean.iptime.org:8301/')"><span>Dan.i PC 바로가기</span></button>
+            <button type="button" class="btn_icon btn_top"><span>상단으로 이동</span></button>
+        </footer>
+        <!-- // footer -->
+        <!-- Modal -->
+        <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <!-- 팝업 내용 -->
+        </div>
+        <!-- // modal -->
     </div>
 </body>
 </html>

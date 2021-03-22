@@ -1,7 +1,7 @@
 ﻿<html>
 <head>
     <meta charset="utf-8">
-    <title>통합검색_검색결과 없는 경우</title>
+    <title>학과분석</title>
     <meta name="description" content="D-esk">
     <meta name="keywords" content="D-esk">
     <meta property="og:title" content="D-esk">
@@ -23,7 +23,11 @@
     <link rel="stylesheet" type="text/css" href="../css/index.css" />
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
     <script type="text/javascript">
-
+        $(document).ready(function () {
+            $(".tab_scroll_area").mCustomScrollbar({
+                theme: "dark"
+            });
+        });
     </script>
     <!-- // page script -->
 </head>
@@ -37,10 +41,10 @@
                     <!-- gnb -->
                     <h2 class="skip">주메뉴</h2>
                     <ul class="gnb_menu">
-                        <li class="active"><a href="../IntegrationSearch/Index.html">통합검색</a></li>
+                        <li><a href="../IntegrationSearch/Index.html">통합검색</a></li>
                         <li><a href="../SubjectAnalysis/Index.html">교과분석</a></li>
                         <li><a href="../NonSubjectAnalysis/Index.html">비교과분석</a></li>
-                        <li><a href="../DepartmentAnalysis/Index.html">학과분석</a></li>
+                        <li class="active"><a href="../DepartmentAnalysis/Index.html">학과분석</a></li>
                         <li><a href="../EmploymentAnalysis/Index.html">취업분석</a></li>
                         <li><a href="../RecruitAnalysis/Index.html">채용분석</a></li>
                         <li><a href="../LectureHistoryAnalysis/Index.html">수강이력분석</a></li>
@@ -63,27 +67,33 @@
                     <!-- 검색 영역 -->
                     <div class="search_wrap">
                         <!-- 검색바 -->
-                        <div class="search_area">
-                            <p class="search_box">
+                        <div class="search_area search_area01 search_area02">
+                            <p class="search_sel_area">
                                 <select class="form-control select">
-                                    <option value="#">통합검색</option>
-                                    <option value="#">교과분석</option>
-                                    <option value="#">비교과분석</option>
-                                    <option value="#">채용분석</option>
+                                    <option value="#">단과대학을 선택하세요</option>
                                 </select>
-                                <input type="text" class="form-control ui-autocomplete-input" id="AutoComplete" placeholder="키워드를 입력하세요.">
-                                <button type="button" class="btn_icon btn_search"><span>검색</span></button>
+                                <select class="form-control select">
+                                    <option value="#">학부명을 선택하세요</option>
+                                </select>
+                                <select class="form-control select">
+                                    <option value="#">전공/학과를 선택하세요</option>
+                                </select>
                             </p>
-                            <p class="search_chk">
-                                <input type="checkbox" class="icon_chk" id="Rebrowsing" />
-                                <label for="Rebrowsing">결과 내 재검색</label>
+                            <p class="search_box">
+                                <input type="text" class="form-control ui-autocomplete-input" id="AutoComplete" onclick="fn_KeywordPop()" placeholder="대학-학부-학과를 선택 후 검색하거나 또는 키워드(학과명)를 입력하세요.">
+                            </p>
+                            <p class="search_btn">
+                                <button type="button" class="btn_primary btn_primary01 btn_search">검색</button>
+                            </p>
+                            <p class="search_reset">
+                                <a href="#" class="reset">초기화</a>
                             </p>
                             <!-- 자동 완성 영역 -->
                             <!-- 자동 완성 영역 위치값 및 스크롤 커스텀을 위한 구조니 변경하지 말아주세요.-->
                             <div class="auto_complete_wrap">
                                 <!-- 검색어 삭제 버튼 이미지 임시로 추가해두었으니 참고 부탁드립니다. -->
                                 <!--<img src="../images/ico_close.png" alt="검색어 삭제" />
-                                <img src="../images/ico_close_xs.png" alt="검색어 삭제" />-->
+                            <img src="../images/ico_close_xs.png" alt="검색어 삭제" />-->
                                 <div class="auto_complete_area">
                                     <!-- 자동 완성 영역 ADD 되는 위치 -->
                                     <ul class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front">
@@ -154,7 +164,7 @@
                         <div class="result_wrap">
                             <div class="count_area">
                                 <div class="keyword">
-                                    <p>검색어<strong>[통합검색 : #검색어#]</strong></p>
+                                    <p>검색어<strong>[학과분석 : #검색어#]</strong></p>
                                     <p>총 0건 검색</p>
                                 </div>
                                 <div class="count">
@@ -167,87 +177,7 @@
                     </div>
                     <!-- // 검색 영역 -->
                     <div class="contents_area">
-                        <div class="filter_wrap">
-                            <ul class="filter_list">
-                                <li>
-                                    <a href="#SubjectAnalysis" class="filter_tit">
-                                        <span class="txt">교과분석</span>
-                                        <span class="count">(154)</span>
-                                    </a>
-                                    <ul class="filter_sub_list">
-                                        <li>
-                                            <span class="txt">연도별</span>
-                                            <span class="count">(154)</span>
-                                        </li>
-                                        <li>
-                                            <span class="txt">과목별</span>
-                                            <span class="count">(50)</span>
-                                        </li>
-                                        <li>
-                                            <span class="txt">학과/전공별</span>
-                                            <span class="count">(60)</span>
-                                        </li>
-                                        <li>
-                                            <span class="txt">인물별</span>
-                                            <span class="count">(40)</span>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#NonSubjectAnalysis" class="filter_tit">
-                                        <span class="txt">비교과분석</span>
-                                        <span class="count">(531)</span>
-                                    </a>
-                                    <ul class="filter_sub_list">
-                                        <li>
-                                            <span class="txt">분석 비교과 정보</span>
-                                            <span class="count">(131)</span>
-                                        </li>
-                                        <li>
-                                            <span class="txt">실시간 비교과 정보</span>
-                                            <span class="count">(400)</span>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#RecruitAnalysis" class="filter_tit">
-                                        <span class="txt">채용분석</span>
-                                        <span class="count">(1,123)</span>
-                                    </a>
-                                    <ul class="filter_sub_list">
-                                        <li>
-                                            <span class="txt">분석 채용 정보</span>
-                                            <span class="count">(523)</span>
-                                        </li>
-                                        <li>
-                                            <span class="txt">실시간 채용 정보</span>
-                                            <span class="count">(600)</span>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#ResearchInfomation" class="filter_tit">
-                                        <span class="txt">논문/연구 정보</span>
-                                        <span class="count">(1,123)</span>
-                                    </a>
-                                    <ul class="filter_sub_list">
-                                        <li>
-                                            <span class="txt">RISS</span>
-                                            <span class="count">(523)</span>
-                                        </li>
-                                        <li>
-                                            <span class="txt">NTIS</span>
-                                            <span class="count">(600)</span>
-                                        </li>
-                                        <li>
-                                            <span class="txt">NDSL</span>
-                                            <span class="count">(60)</span>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="contents">
+                        <div class="contents contents01">
                             <p class="result_info">
                                 <span class="icon_before">
                                     <strong>“#검색어#”</strong> 에 대한 검색결과가 없습니다.
@@ -279,15 +209,9 @@
                 </div>
             </div>
             <button type="button" class="btn_icon btn_dani" onclick="window.open('http://blucean.iptime.org:8301/')"><span>Dan.i PC 바로가기</span></button>
-            <button type="button" class="btn_icon btn_dani" onclick="window.open('http://blucean.iptime.org:8301/')"><span>Dan.i PC 바로가기</span></button>
             <button type="button" class="btn_icon btn_top"><span>상단으로 이동</span></button>
         </footer>
         <!-- // footer -->
-        <!-- Modal -->
-        <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <!-- 팝업 내용 -->
-        </div>
-        <!-- // modal -->
     </div>
 </body>
 </html>

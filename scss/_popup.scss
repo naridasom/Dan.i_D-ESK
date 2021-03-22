@@ -5,6 +5,8 @@
 .modal:before {display: inline-block; vertical-align: middle; content: ""; height: 100%;}
 .modal-open .modal{overflow-x:auto;}
 .modal-dialog{display: inline-block; text-align: left; vertical-align: middle; max-width:inherit; margin:0 auto; width:900px; padding:0 20px;}
+.modal-dialog01{width:1100px;}
+.modal-content{padding:0 20px; border:none; border-radius:10px;}
 
 
 
@@ -67,11 +69,13 @@
         > strong{font-family: "Gong Gothic"; font-weight: 400; color:#0054a3;}
     }
     .control_wrap{
+        @include flex; align-items:center;
         .sel_area{
             @include flex; align-items:center;
             > label, select{}
             > label{padding-right:10px;}
             > select{width:130px; height:40px; font-size:14px; color:#222; padding:8px 30px 8px 10px; border:1px solid $border;}
+            > select + label{padding-left:10px;}
         }
         .filter_icon{
             padding-left:20px;
@@ -81,6 +85,9 @@
                 &.active:after{background-position:-80px -140px;}
             }
         }
+    }
+    .btn_area{
+        button{width: 100px; height: 40px; font-size: 14px; font-weight: 500;}
     }
     &.flex_end{justify-content:flex-end; border-bottom:none;}
 }
@@ -109,43 +116,26 @@
     padding:45px;
 }
 
-/**/
+.his_graph_wrap{padding-bottom:50px;}
+.his_graph_wrap .pop_sub_title{font-size:18px; padding-left:5px; padding-bottom:10px;}
+.his_graph_wrap .pop_sub_info{padding-left:5px;}
+.his_graph_wrap .pop_sub_info strong{font-weight:500; color:#375592;}
+.his_graph_wrap .list_title_area{padding:30px 5px 15px 5px; border-bottom:none;}
+.his_graph_wrap .list_title_area .tbl_count{float:left; margin-left:0;}
+.his_graph_wrap .list_title_area .person_info{float:right; color:#9b9b9b; line-height:40px;}
+.his_graph_area{height:420px;}
+.his_graph_list{max-height:100%; overflow-y:auto; padding:25px 50px 25px 25px; background-color:#fff; border:1px solid #d4d4d4; border-radius:10px; position:relative;}
+.his_graph_list > li{
+    @include flex; align-items:center;
+}
+.his_graph_list > li:last-child{margin-bottom:0;}
+.his_graph_list > li .graph_tit{flex-basis:310px; flex-shrink:1; width:310px; line-height:20px; color:#222; padding:10px 35px 10px 10px; border-right:1px solid $border;}
+.his_graph_list > li .graph_bar{flex-grow:1; padding:15px 10px 15px 35px; position:relative;}
+.his_graph_list > li .graph_bar .graph_tooltip{position: absolute; left: 0; top: 15px; right:0; height: 11px;}
+.his_graph_list > li .graph_bar .graph_person{display:inline-block; vertical-align:middle; background-color:#67b7dd; width:100px; height:11px; position:relative;}
+.his_graph_list > li .graph_bar .graph_person > span{color:#222; position:absolute; right:-35px; top:-3px;}
 
-.modal_type_01{width:120px;}
-.modal_type_01 .modal-body{height:640px;}
-.modal_type_02{width:440px;}
-
-.modal_type_03{width:640px;}
-.modal_type_03 .modal-body{height:625px;}
-.modal_type_03 .modal_body01{overflow-y:auto; margin-bottom:20px;}
-.modal_type_03 .modal_body02{height:500px; overflow-y:auto;}
-.modal_type_04{width:640px;}
-.modal_type_04 .modal-body{height:270px;}
-.modal-content{padding:0 20px; border:none; border-radius:10px;}
-
-
-
-.modal-footer{font-size:0; padding:20px 0 20px 10px; border-top:none;}
-.modal-footer > button{width:100px; height:40px; font-size:14px; margin-left:10px; }
-.modal-footer:not(.only) > button:first-child{margin-left:-10px;}
-.modal-footer.only{padding-left:0;}
-.modal-footer.only > button{margin-left:0;}
-
-.modal-body{padding:0;}
-.modal-body .pop_sub_title{font-family: "Gong Gothic"; font-weight: 400; font-size:18px; color:#222; padding:25px 0 15px 0;}
-.modal-body .pop_sub_title01{padding:0;}
-.modal-body .pop_sub_title02{padding-bottom:20px;}
-.modal-body .pop_sub_title03{padding-top:20px; padding-bottom:15px !important; border-bottom:2px solid #666;}
-.modal-body .pop_sub_title span{font-family: "Gong Gothic"; font-weight: 400; font-size:18px; color:#888;}
-.modal-body .pop_sub_info{line-height:24px;}
-.modal-body .sub_tab_title{font-family: "Gong Gothic"; font-weight: 400; font-size:18px; margin-top:18px;}
-.modal-body .p_main_title{cursor:default;}
-/*.modal-body .sub_tab_title + .list_title_area{margin-top:10px;}*/
-.modal-body .search_area{margin:25px 0;}
-.modal_tab_area{}
-.modal_tab_con_area{ padding:32px 0;}
-
-
+/* alert */
 .alert_modal{
     .modal-dialog{width:350px; padding:30px; background-color:#fff; border:1px solid #d4d4d4; border-radius:10px; -webkit-box-shadow: 0px 0px 8px 1.5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0px 0px 8px 1.5px rgba(0, 0, 0, 0.1); box-shadow: 0px 0px 8px 1.5px rgba(0, 0, 0, 0.1);}
     .modal-content{padding:0;}

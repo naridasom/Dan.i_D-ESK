@@ -1,7 +1,6 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Common",
     "\\css",
     "\\css\\lib",
     "\\IntegrationSearch",
@@ -10,8 +9,9 @@
     "\\Layout",
     "\\NonSubjectAnalysis",
     "\\RecruitAnalysis",
-    "\\scss"
+    "\\scss",
+    "\\SubjectAnalysis"
   ],
-  "SelectedNode": "\\js\\index.js",
+  "SelectedNode": "\\SubjectAnalysis\\SearchResult.html",
   "PreviewInSolutionExplorer": false
 }
