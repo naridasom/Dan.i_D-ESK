@@ -23,7 +23,24 @@
     <link rel="stylesheet" type="text/css" href="../css/index.css" />
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
     <script type="text/javascript">
-
+        $(document).ready(function () {
+            // 비교과 탭으로 이동 및 활성화되게
+            $('.filter_tit01').click(function (e) {
+                if ($(this).attr("id") == "Subject_tab1_go") {
+                    $('.main_tab_nav a[href="#Subject_tab1"]').trigger("click");
+                    $('html, body').animate({
+                        scrollTop: $("#NonSubject").offset().top - 172
+                    }, 500);
+                } else if ($(this).attr("id") == "Subject_tab2_go") {
+                    $('.main_tab_nav a[href="#Subject_tab2"]').trigger("click");
+                    $('html, body').animate({
+                        scrollTop: $("#NonSubject").offset().top - 172
+                    }, 500);
+                }
+            });
+        });
+       
+        
     </script>
     <!-- // page script -->
 </head>
@@ -160,7 +177,7 @@
                         <div class="filter_wrap">
                             <ul class="filter_list filter_list01">
                                 <li>
-                                    <span class="filter_tit">
+                                    <span id="Subject_tab1_go" class="filter_tit01">
                                         <span class="txt">분석 비교과 정보</span>
                                         <span class="count">(279)</span>
                                     </span>
@@ -228,7 +245,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <span class="filter_tit">
+                                    <span id="Subject_tab2_go" class="filter_tit01">
                                         <span class="txt">실시간 비교과 정보</span>
                                         <span class="count">(279)</span>
                                     </span>
@@ -241,56 +258,8 @@
                                         </li>
                                         <li>
                                             <a href="#">
-                                                <span class="txt">:D-Mate</span>
-                                                <span class="count">(12)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span class="txt">:D-MOOC</span>
-                                                <span class="count">(8)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
                                                 <span class="txt">KOCW</span>
                                                 <span class="count">(5)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span class="txt">K-MOOC</span>
-                                                <span class="count">(5)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span class="txt">주경야독</span>
-                                                <span class="count">(8)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span class="txt">해커스</span>
-                                                <span class="count">(5)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span class="txt">에듀윌</span>
-                                                <span class="count">(5)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span class="txt">#EDWITH</span>
-                                                <span class="count">(4)</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span class="txt">#EDISON MOOC</span>
-                                                <span class="count">(3)</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -319,7 +288,7 @@
                                     <img src="../images/chart_ex_02.png" alt="차트 이미지" />
                                 </div>
                             </div>
-                            <div class="cont_hd">
+                            <div class="cont_hd" id="NonSubject">
                                 <div class="cont_tit">
                                     <h3>
                                         <strong>연관 비교과목 정보</strong>

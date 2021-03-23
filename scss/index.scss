@@ -273,6 +273,16 @@ body.open{overflow-y:hidden;}
                     }
                 }
             }
+            .filter_tit01{
+                display:block; font-size:0; padding:12px 20px; background-color:#f3f3f3; border-bottom:1px solid $border; cursor:pointer;
+                > span{
+                    font-size:14px; font-weight:500;
+                        &.txt{
+                        color:#555;
+                    }
+                }
+                & + .filter_sub_list > li > a{cursor:default;}
+            }
             > span.filter_tit{
 
             }
@@ -409,6 +419,7 @@ body.open{overflow-y:hidden;}
                                 &.count{color:#555;}
                             }
                         }
+                        &.active > a{font-weight:500; text-decoration:underline;}
                     }
                 }
             }

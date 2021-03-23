@@ -1543,6 +1543,21 @@ body.open {
     .filter_wrap .filter_list > li > .filter_tit > span.txt {
       color: #555; }
 
+.filter_wrap .filter_list > li .filter_tit01 {
+  display: block;
+  font-size: 0;
+  padding: 12px 20px;
+  background-color: #f3f3f3;
+  border-bottom: 1px solid #d4d4d4;
+  cursor: pointer; }
+  .filter_wrap .filter_list > li .filter_tit01 > span {
+    font-size: 14px;
+    font-weight: 500; }
+    .filter_wrap .filter_list > li .filter_tit01 > span.txt {
+      color: #555; }
+  .filter_wrap .filter_list > li .filter_tit01 + .filter_sub_list > li > a {
+    cursor: default; }
+
 .filter_wrap .filter_list > li .filter_sub_list {
   max-height: 160px;
   overflow-y: auto;
@@ -1706,6 +1721,9 @@ body.open {
             color: #000; }
           .filter_tab_area .tab_wrap .tab-content .tab-pane .tab_filter_list > li > a > span.count {
             color: #555; }
+        .filter_tab_area .tab_wrap .tab-content .tab-pane .tab_filter_list > li.active > a {
+          font-weight: 500;
+          text-decoration: underline; }
   .filter_tab_area .tab_wrap .tab_select_area {
     padding: 18px 65px 18px 20px;
     border: 1px solid #d4d4d4;
