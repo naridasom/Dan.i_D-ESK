@@ -1,0 +1,185 @@
+﻿    <!-- 교과 연관 정보 팝업 -->
+<div class="modal fade" id="Pop_SubjectInfo" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal_type_03">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="pop_title">교과 연관 정보</h5>
+                <button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><span>팝업 창 닫기</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal_tab_area">
+                    <h6 class="pop_sub_title pop_sub_title02">국문학개론</h6>
+                    <ul class="modal_tab modal_tab2">
+                        <li class="active" rel="modal_tab_box3">교재/참고문헌</li>
+                        <li rel="modal_tab_box4">논문/연구 정보</li>
+                    </ul>
+                    <!-- 교재/참고문헌 -->
+                    <div class="modal_tab_box active" id="modal_tab_box3">
+                        <form method="#" action="#">
+                            <div class="search_area modal_search_area">
+                                <p class="search_box">
+                                    <input type="text" class="form-control" placeholder="교재 또는 참고문헌명을 입력하세요.">
+                                    <button type="button" class="btn_icon btn_search"><span>검색</span></button>
+                                </p>
+                            </div>
+                            <div class="tbl_wrap">
+                                <div class="tbl_title_area tbl_title_area01">
+                                    <p class="tbl_count">총 <strong>12</strong>개</p>
+                                    <div class="filter_wrap">
+                                        <button type="button" class="btn_icon icon_filter" onclick="fn_MoreToggle(this);"><span>필터</span></button>
+                                        <div class="filter_pop_list">
+                                            <strong class="title">정렬</strong>
+                                            <span class="icon_after active" onclick="fn_Toggle(this);">교재명</span>
+                                        </div>
+                                    </div>
+                                    <p class="sel_area">
+                                        <label for="textbook">교재구분</label>
+                                        <select class="form-control" id="textbook">
+                                            <option value="#">전체</option>
+                                            <option value="#">주교재</option>
+                                            <option value="#">부교재</option>
+                                            <option value="#">참고문헌</option>
+                                        </select>
+                                    </p>
+                                </div>
+                                <div class="tbl_area pop_tbl_area pop_tbl_area02">
+                                    <table class="tbl tbl_list">
+                                        <colgroup>
+                                            <col style="width:100px">
+                                            <col style="width:165px">
+                                            <col style="width:85px">
+                                            <col style="width:115px">
+                                            <col style="width:80px">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">구분</th>
+                                                <th scope="col" class="ta_l">교재/참고문헌명</th>
+                                                <th scope="col">저자</th>
+                                                <th scope="col" class="ta_l">출판사</th>
+                                                <th scope="col">좋아요</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- default - 리스트 10개 -->
+                                            <tr>
+                                                <td>
+                                                    <span class="category">주교재</span>
+                                                </td>
+                                                <td class="ta_l">
+                                                    <a href="#" target="_blank" title="참조경제에서의 경영전략">
+                                                        <strong class="p_main_title ellipsis">참조경제에서의 경영전략</strong>
+                                                    </a>
+                                                </td>
+                                                <td>이장우</td>
+                                                <td class="ta_l" title="법문사"><span class="ellipsis">법문사</span></td>
+                                                <td>
+                                                    <span class="voca_like">
+                                                        <input type="checkbox" class="icon_chk icon_chk_like" name="like_status" id="like1">
+                                                        <label for="like1">100</label>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <!-- // default - 리스트 10개 -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="paging_area">
+                                <ul class="paging">
+                                    <li class="page_prev"><a href="#"><span class="icon">이전 페이지로 이동</span></a></li>
+                                    <li class="active"><a href="#none">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li class="page_next"><a href="#"><span class="icon">다음 페이지로 이동</span></a></li>
+                                </ul>
+                            </div>
+                            <!-- null 값일 경우 -->
+                            <!--<p class="sub_tab_none">
+                                <span>
+                                    선택한 교과와 연관된 교재/참고문헌 정보는<br />
+                                    아직 분석되지 않았어요. 추후에 반영될 예정입니다.
+                                </span>
+                            </p>-->
+                            <!-- // null 값일 경우 -->
+                        </form>
+                    </div>
+                    <!-- // 교재/참고문헌 -->
+                    <!-- 논문/연구 정보 -->
+                    <div class="modal_tab_box" id="modal_tab_box4">
+                        <form method="#" action="#">
+                            <div class="relation_area">
+                                <div class="relation_tit">
+                                    <ul class="rel_tag_list">
+                                        <li class="active">#RISS</li>
+                                        <li>#NTIS</li>
+                                        <li>#NDSL</li>
+                                    </ul>
+                                    <div class="search_area modal_search_area">
+                                        <p class="search_box">
+                                            <input type="text" class="form-control" placeholder="논문/연구명을 입력하세요.">
+                                            <button type="button" class="btn_icon btn_search"><span>검색</span></button>
+                                        </p>
+                                    </div>
+                                    <div class="list_title_area list_title_area01">
+                                        <p class="tbl_count">총 <strong>12</strong>개</p>
+                                        <div class="filter_wrap">
+                                            <button type="button" class="btn_icon icon_filter" onclick="fn_MoreToggle(this);"><span>필터</span></button>
+                                            <div class="filter_pop_list">
+                                                <strong class="title">정렬</strong>
+                                                <span class="icon_after active" onclick="fn_Toggle(this);">논문/연구명</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="relation_list relation_list_type05">
+                                    <li>
+                                        <div class="relation_box relation_box01">
+                                            <a href="#" target="_blank" title="빅데이터 분석을 활용한 관광기반형 강소마케팅에 관한 연구">
+                                                <strong class="p_main_title">빅데이터 분석을 활용한 관광기반형 강소마케팅에 관한 연구</strong>
+                                                <span class="p_sub_title"><strong>구분</strong> 학위논문 | <strong>저자</strong> 전소라 | <strong>발행사항</strong> 단국대학교 대학원 | <strong>발행연도</strong> 2020</span>
+                                            </a>
+                                            <p class="rel_like">
+                                                <span class="voca_like">
+                                                    <input type="checkbox" class="icon_chk icon_chk_like" name="like_status" id="like2">
+                                                    <label for="like2">100</label>
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <p class="rel_scrap">
+                                            <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_scrap" name="nonsubject_scrap" id="scrap1">
+                                            <label for="scrap1">스크랩</label>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="paging_area">
+                                <ul class="paging">
+                                    <li class="page_prev"><a href="#"><span class="icon">이전 페이지로 이동</span></a></li>
+                                    <li class="active"><a href="#none">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li class="page_next"><a href="#"><span class="icon">다음 페이지로 이동</span></a></li>
+                                </ul>
+                            </div>
+                            <!-- null 값일 경우 -->
+                            <!--<p class="sub_tab_none">
+                                <span>
+                                    선택한 교과와 연관된 논문/연구 정보는<br />
+                                    아직 분석되지 않았어요. 추후에 반영될 예정입니다.
+                                </span>
+                            </p>-->
+                            <!-- // null 값일 경우 -->
+                        </form>
+                    </div>
+                    <!-- // 논문/연구 정보 -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // 교과 연관 정보 팝업 -->

@@ -1,0 +1,322 @@
+﻿    <!-- 실시간 채용정보 팝업 -->
+<div class="modal fade" id="RecruitInfomation" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal_type_03">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="pop_title">실시간 채용정보</h5>
+                <button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><span>팝업 창 닫기</span></button>
+            </div>
+            <div class="modal-body">
+                <h6 class="pop_sub_title">기아자동차</h6>
+                <div class="modal_tab_area">
+                    <ul class="modal_tab modal_tab2">
+                        <li class="active" rel="modal_tab_box4">분석</li>
+                        <li rel="modal_tab_box5">실시간</li>
+                    </ul>
+                    <div class="modal_tab_con_area">
+                        <!-- 분석 -->
+                        <div class="modal_tab_box active" id="modal_tab_box4">
+                            <ul class="filter_list filter_list01">
+                                <li class="active">#영웅스토리 추천채용</li>
+                                <li>#영웅스토리 일반채용</li>
+                            </ul>
+                            <div class="search_area modal_search_area">
+                                <p class="search_box">
+                                    <input type="text" class="form-control" placeholder="기업명 또는 채용 공고명을 입력하세요.">
+                                    <button type="button" class="btn_icon btn_search"><span>검색</span></button>
+                                </p>
+                            </div>
+                            <div class="tbl_wrap">
+                                <div class="tbl_title_area">
+                                    <p class="tbl_count">총 <strong>12</strong>개</p>
+                                    <div class="filter_wrap">
+                                        <button type="button" class="btn_icon icon_filter" onclick="fn_MoreToggle(this);"><span>필터</span></button>
+                                        <div class="filter_pop_list">
+                                            <strong class="title">정렬</strong>
+                                            <span class="icon_after" onclick="fn_Toggle(this);">마감일</span>
+                                        </div>
+                                    </div>
+                                    <p class="sel_area">
+                                        <label for="category">신청구분</label>
+                                        <select class="form-control" id="category">
+                                            <option value="#">전체</option>
+                                            <option value="#">신청가능</option>
+                                            <option value="#">마감</option>
+                                        </select>
+                                    </p>
+                                </div>
+                                <div class="tbl_area pop_tbl_area pop_tbl_area03">
+                                    <table class="tbl tbl_list">
+                                        <colgroup>
+                                            <col style="width:120px" />
+                                            <col style="width:auto">
+                                            <col style="width:90px">
+                                            <col style="width:100px">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">구분</th>
+                                                <th scope="col" class="ta_l">채용정보</th>
+                                                <th scope="col">좋아요</th>
+                                                <th scope="col">연관토픽</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- default - 리스트 10개 -->
+                                            <tr>
+                                                <td>
+                                                    <span class="category category01">영웅스토리 추천채용</span>
+                                                </td>
+                                                <td class="ta_l">
+                                                    <strong class="p_sub_title">기아자동차</strong>
+                                                    <strong class="p_main_title ellipsis" title="기아자동차(주) 2021년 신입사원 채용">기아자동차(주) 2021년 신입사원 채용</strong>
+                                                    <span class="p_sub_title"><strong>캠퍼스</strong> 죽전 | <strong>근무지역</strong> 서울</span>
+                                                    <span class="p_sub_title"> <strong>마감일</strong> ~12.30</span>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" class="icon_chk icon_chk_like" id="AnalysisLike" />
+                                                    <label for="AnalysisLike">100</label>
+                                                </td>
+                                                <td>
+                                                    <span class="icon_after icon_toggle icon_tbl_toggle">토픽접기</span>
+                                                </td>
+                                            </tr> <!-- 토픽 영역 -->
+                                            <tr class="tbl_topic_area">
+                                                <td colspan="4">
+                                                    <!-- 상위 5개 토픽만 노출 -->
+                                                    <ul class="tbl_topic_list">
+                                                        <li class="business">
+                                                            <strong>기아자동차</strong>
+                                                            <p class="topic_chk">
+                                                                <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="business" id="business">
+                                                                <label for="business">기업 담기</label>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <strong>인공지능</strong>
+                                                            <span class="p_sub_title only">빈도수 1210</span>
+                                                            <p class="topic_chk">
+                                                                <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="topic_status" id="topic1">
+                                                                <label for="topic1">사용여부</label>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <strong>인공지능</strong>
+                                                            <span class="p_sub_title only">빈도수 1210</span>
+                                                            <p class="topic_chk">
+                                                                <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="topic_status" id="topic1">
+                                                                <label for="topic1">사용여부</label>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <strong>인공지능</strong>
+                                                            <span class="p_sub_title only">빈도수 1210</span>
+                                                            <p class="topic_chk">
+                                                                <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="topic_status" id="topic1">
+                                                                <label for="topic1">사용여부</label>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <strong>인공지능</strong>
+                                                            <span class="p_sub_title only">빈도수 1210</span>
+                                                            <p class="topic_chk">
+                                                                <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="topic_status" id="topic1">
+                                                                <label for="topic1">사용여부</label>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <strong>인공지능</strong>
+                                                            <span class="p_sub_title only">빈도수 1210</span>
+                                                            <p class="topic_chk">
+                                                                <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="topic_status" id="topic1">
+                                                                <label for="topic1">사용여부</label>
+                                                            </p>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- // 상위 5개 토픽만 노출 -->
+                                                </td>
+                                            </tr>
+                                            <!-- // 토픽 영역 -->
+                                            <!-- // default - 리스트 10개 -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="paging_area">
+                                <ul class="paging">
+                                    <li class="page_prev"><a href="#"><span class="icon">이전 페이지로 이동</span></a></li>
+                                    <li class="active"><a href="#none">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li class="page_next"><a href="#"><span class="icon">다음 페이지로 이동</span></a></li>
+                                </ul>
+                            </div>
+                            <!-- 실시간 채용정보 NULL 값일 경우 -->
+                            <!--<p class="sub_tab_none sub_tab_none01">
+                                <span>
+                                    선택한 기업과 연관된 채용정보는<br />
+                                    아직 분석되지 않았어요. 추후에 반영될 예정입니다.
+                                </span>
+                            </p>-->
+                            <!-- // 실시간 채용정보 NULL 값일 경우 -->
+                        </div>
+                        <!-- // 분석 -->
+                        <!-- 실시간 -->
+                        <div class="modal_tab_box" id="modal_tab_box5">
+                            <ul class="filter_list filter_list01">
+                                <li class="active">#영웅스토리 추천채용</li>
+                                <li>#사람인</li>
+                                <li>#잡코리아</li>
+                                <li>#워크넷</li>
+                            </ul>
+                            <div class="search_area modal_search_area">
+                                <p class="search_box">
+                                    <input type="text" class="form-control" placeholder="기업명 또는 채용 공고명을 입력하세요.">
+                                    <button type="button" class="btn_icon btn_search"><span>검색</span></button>
+                                </p>
+                            </div>
+                            <div class="tbl_wrap">
+                                <div class="tbl_title_area">
+                                    <p class="tbl_count">총 <strong>12</strong>개</p>
+                                    <div class="filter_wrap">
+                                        <button type="button" class="btn_icon icon_filter" onclick="fn_MoreToggle(this);"><span>필터</span></button>
+                                        <div class="filter_pop_list">
+                                            <strong class="title">정렬</strong>
+                                            <span class="icon_after" onclick="fn_Toggle(this);">마감일</span>
+                                        </div>
+                                    </div>
+                                    <p class="sel_area">
+                                        <label for="category">신청구분</label>
+                                        <select class="form-control" id="category">
+                                            <option value="#">전체</option>
+                                            <option value="#">신청가능</option>
+                                            <option value="#">마감</option>
+                                        </select>
+                                    </p>
+                                </div>
+                                <div class="tbl_area pop_tbl_area pop_tbl_area03">
+                                    <table class="tbl tbl_list">
+                                        <colgroup>
+                                            <col style="width:120px" />
+                                            <col style="width:auto">
+                                            <col style="width:90px">
+                                            <col style="width:100px">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">구분</th>
+                                                <th scope="col" class="ta_l">채용정보</th>
+                                                <th scope="col">좋아요</th>
+                                                <th scope="col">연관토픽</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- default - 리스트 10개 -->
+                                            <tr>
+                                                <td>
+                                                    <span class="category category01">영웅스토리 추천채용</span>
+                                                </td>
+                                                <td class="ta_l">
+                                                    <strong class="p_sub_title">기아자동차</strong>
+                                                    <strong class="p_main_title ellipsis" title="기아자동차(주) 2021년 신입사원 채용">기아자동차(주) 2021년 신입사원 채용</strong>
+                                                    <span class="p_sub_title"><strong>캠퍼스</strong> 죽전 | <strong>근무지역</strong> 서울</span>
+                                                    <span class="p_sub_title"> <strong>마감일</strong> ~12.30</span>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" class="icon_chk icon_chk_like" id="AnalysisLike" />
+                                                    <label for="AnalysisLike">100</label>
+                                                </td>
+                                                <td>
+                                                    <span class="icon_after icon_toggle icon_tbl_toggle">토픽접기</span>
+                                                </td>
+                                            </tr> <!-- 토픽 영역 -->
+                                            <tr class="tbl_topic_area">
+                                                <td colspan="4">
+                                                    <!-- 상위 5개 토픽만 노출 -->
+                                                    <ul class="tbl_topic_list">
+                                                        <li class="business">
+                                                            <strong>기아자동차</strong>
+                                                            <p class="topic_chk">
+                                                                <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="business" id="business">
+                                                                <label for="business">기업 담기</label>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <strong>인공지능</strong>
+                                                            <span class="p_sub_title only">빈도수 1210</span>
+                                                            <p class="topic_chk">
+                                                                <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="topic_status" id="topic1">
+                                                                <label for="topic1">사용여부</label>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <strong>인공지능</strong>
+                                                            <span class="p_sub_title only">빈도수 1210</span>
+                                                            <p class="topic_chk">
+                                                                <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="topic_status" id="topic1">
+                                                                <label for="topic1">사용여부</label>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <strong>인공지능</strong>
+                                                            <span class="p_sub_title only">빈도수 1210</span>
+                                                            <p class="topic_chk">
+                                                                <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="topic_status" id="topic1">
+                                                                <label for="topic1">사용여부</label>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <strong>인공지능</strong>
+                                                            <span class="p_sub_title only">빈도수 1210</span>
+                                                            <p class="topic_chk">
+                                                                <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="topic_status" id="topic1">
+                                                                <label for="topic1">사용여부</label>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <strong>인공지능</strong>
+                                                            <span class="p_sub_title only">빈도수 1210</span>
+                                                            <p class="topic_chk">
+                                                                <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="topic_status" id="topic1">
+                                                                <label for="topic1">사용여부</label>
+                                                            </p>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- // 상위 5개 토픽만 노출 -->
+                                                </td>
+                                            </tr>
+                                            <!-- // 토픽 영역 -->
+                                            <!-- // default - 리스트 10개 -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="paging_area">
+                                <ul class="paging">
+                                    <li class="page_prev"><a href="#"><span class="icon">이전 페이지로 이동</span></a></li>
+                                    <li class="active"><a href="#none">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li class="page_next"><a href="#"><span class="icon">다음 페이지로 이동</span></a></li>
+                                </ul>
+                            </div>
+                            <!-- 실시간 채용정보 NULL 값일 경우 -->
+                            <!--<p class="sub_tab_none sub_tab_none01">
+                                <span>
+                                    선택한 기업과 연관된 채용정보가 없습니다.
+                                </span>
+                            </p>-->
+                            <!-- // 실시간 채용정보 NULL 값일 경우 -->
+                        </div>
+                        <!-- // 실시간 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // 실시간 채용정보 팝업 -->

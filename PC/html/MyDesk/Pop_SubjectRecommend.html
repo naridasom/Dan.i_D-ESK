@@ -1,0 +1,184 @@
+﻿    <!-- 교과목 추천 팝업 -->
+<div class="modal fade" id="Pop_SubjectRecommend" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal_type_03">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="pop_title">교과목 추천</h5>
+                <button type="button" class="btn_icon btn_pop_close" data-dismiss="modal" aria-label="Close"><span>팝업 창 닫기</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal_tab_area">
+                    <h6 class="pop_sub_title pop_sub_title01">국문학개론</h6>
+                    <form method="#" action="#">
+                        <div class="search_area modal_search_area">
+                            <p class="search_box">
+                                <input type="text" class="form-control" placeholder="교과목명을 입력하세요.">
+                                <button type="button" class="btn_icon btn_search"><span>검색</span></button>
+                            </p>
+                        </div>
+                        <div class="relation_tit">
+                            <p class="pag_info">이미 수강한 교과목은 제외하고 추천해 드려요.</p>
+                            <div class="list_title_area">
+                                <p class="tbl_count">총 <strong>12</strong>개</p>
+                                <div class="filter_wrap">
+                                    <button type="button" class="btn_icon icon_filter" onclick="fn_MoreToggle(this);"><span>필터</span></button>
+                                    <div class="filter_pop_list">
+                                        <strong class="title">정렬</strong>
+                                        <span class="icon_after active" onclick="fn_Toggle(this);">교과목명</span>
+                                    </div>
+                                </div>
+                                <p class="sel_area">
+                                    <label for="division">이수구분</label>
+                                    <select class="form-control" id="division">
+                                        <option value="#">전체</option>
+                                        <option value="#">학과기초</option>
+                                        <option value="#">전공필수</option>
+                                        <option value="#">교양선택</option>
+                                    </select>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="relation_area">
+                            <ul class="relation_list relation_list_type02">
+                                <li>
+                                    <div class="relation_box">
+                                        <strong class="p_main_title">국문학개론</strong>
+                                        <span class="p_sub_title">전공필수 | 학점 3 | 문과대학 국어국문학과</span>
+                                        <p class="rel_chk">
+                                            <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="relation" id="relation1" />
+                                            <label for="relation1">사용</label>
+                                        </p>
+                                    </div>
+                                    <p class="rel_toggle">
+                                        <span class="icon_after icon_toggle">토픽보기</span>
+                                    </p>
+                                    <!-- 상위 5개 토픽만 노출 -->
+                                    <ul class="rel_topic_list">
+                                        <li>
+                                            <strong>인공지능</strong>
+                                            <span class="p_sub_title only">빈도수 1210</span>
+                                            <p class="topic_chk">
+                                                <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="topic_status" id="topic1">
+                                                <label for="topic1">사용여부</label>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <strong>인공지능</strong>
+                                            <span class="p_sub_title only">빈도수 1210</span>
+                                            <p class="topic_chk">
+                                                <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="topic_status" id="topic1">
+                                                <label for="topic1">사용여부</label>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <strong>인공지능</strong>
+                                            <span class="p_sub_title only">빈도수 1210</span>
+                                            <p class="topic_chk">
+                                                <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="topic_status" id="topic1">
+                                                <label for="topic1">사용여부</label>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <strong>인공지능</strong>
+                                            <span class="p_sub_title only">빈도수 1210</span>
+                                            <p class="topic_chk">
+                                                <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="topic_status" id="topic1">
+                                                <label for="topic1">사용여부</label>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <strong>인공지능</strong>
+                                            <span class="p_sub_title only">빈도수 1210</span>
+                                            <p class="topic_chk">
+                                                <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="topic_status" id="topic1">
+                                                <label for="topic1">사용여부</label>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                    <!-- // 상위 5개 토픽만 노출 -->
+                                </li>
+                                <li>
+                                    <div class="relation_box">
+                                        <strong class="p_main_title">국문학개론</strong>
+                                        <span class="p_sub_title">전공필수 | 학점 3 | 문과대학 국어국문학과</span>
+                                        <p class="rel_chk">
+                                            <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="relation" id="relation1" />
+                                            <label for="relation1">사용</label>
+                                        </p>
+                                    </div>
+                                    <p class="rel_toggle">
+                                        <span class="icon_after icon_toggle">토픽보기</span>
+                                    </p>
+                                    <!-- 상위 5개 토픽만 노출 -->
+                                    <ul class="rel_topic_list">
+                                        <li>
+                                            <strong>인공지능</strong>
+                                            <span class="p_sub_title only">빈도수 1210</span>
+                                            <p class="topic_chk">
+                                                <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="topic_status" id="topic1">
+                                                <label for="topic1">사용여부</label>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <strong>인공지능</strong>
+                                            <span class="p_sub_title only">빈도수 1210</span>
+                                            <p class="topic_chk">
+                                                <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="topic_status" id="topic1">
+                                                <label for="topic1">사용여부</label>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <strong>인공지능</strong>
+                                            <span class="p_sub_title only">빈도수 1210</span>
+                                            <p class="topic_chk">
+                                                <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="topic_status" id="topic1">
+                                                <label for="topic1">사용여부</label>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <strong>인공지능</strong>
+                                            <span class="p_sub_title only">빈도수 1210</span>
+                                            <p class="topic_chk">
+                                                <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="topic_status" id="topic1">
+                                                <label for="topic1">사용여부</label>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <strong>인공지능</strong>
+                                            <span class="p_sub_title only">빈도수 1210</span>
+                                            <p class="topic_chk">
+                                                <input type="checkbox" class="icon_chk icon_chk_notxt icon_chk_use" name="topic_status" id="topic1">
+                                                <label for="topic1">사용여부</label>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                    <!-- // 상위 5개 토픽만 노출 -->
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="paging_area">
+                            <ul class="paging">
+                                <li class="page_prev"><a href="#"><span class="icon">이전 페이지로 이동</span></a></li>
+                                <li class="active"><a href="#none">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li class="page_next"><a href="#"><span class="icon">다음 페이지로 이동</span></a></li>
+                            </ul>
+                        </div>
+                        <!-- null 값일 경우 -->
+                        <!--<p class="sub_tab_none sub_tab_none05">
+                            <span>
+                                선택한 교과와 관련된 추천 교과목은<br />
+                                아직 분석되지 않았어요. 추후에 반영될 예정입니다.
+                            </span>
+                        </p>-->
+                        <!-- // null 값일 경우 -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- // 교과목 추천 팝업 -->

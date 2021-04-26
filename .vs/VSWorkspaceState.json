@@ -1,17 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\css",
-    "\\css\\lib",
+    "\\Common",
+    "\\DepartmentAnalysis",
+    "\\EducationStatistics",
+    "\\EmploymentAnalysis",
     "\\IntegrationSearch",
-    "\\js",
-    "\\js\\lib",
-    "\\Layout",
+    "\\LectureHistoryAnalysis",
     "\\NonSubjectAnalysis",
     "\\RecruitAnalysis",
-    "\\scss",
-    "\\SubjectAnalysis"
+    "\\scss"
   ],
-  "SelectedNode": "\\SubjectAnalysis\\SearchResult.html",
+  "SelectedNode": "\\NonSubjectAnalysis\\SearchResult_None.html",
   "PreviewInSolutionExplorer": false
 }
