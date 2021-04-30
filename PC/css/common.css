@@ -235,6 +235,7 @@ strong.p_sub_title{font-weight:400; margin-bottom:5px; margin-top:0;}
 .search_area > .search_box > button > span{width:23px; height:23px; background-position:-300px -160px;}
 
 .cont_sub_hd{display:inline-block; vertical-align:top; width:100%; position:relative;}
+.cont_sub_hd + .cont_sub_hd{margin-top:10px;}
 .cont_sub_hd .pag_info, .cont_sub_hd .sel_area, .cont_sub_hd .sub_title01, .cont_sub_hd .list_count, .cont_sub_hd .sub_sc_title{float:left;}
 .cont_sub_hd .voca_state_area, .cont_sub_hd .sel_area01, .cont_sub_hd .filter_wrap{float:right;}
 .cont_sub_hd .sub_title > strong.active{color:#0054a3;}
@@ -573,6 +574,8 @@ strong.p_sub_title{font-weight:400; margin-bottom:5px; margin-top:0;}
 .relation_list_type06.pag_none{max-height:570px;}
 .relation_list_type07{max-height:560px;}
 .relation_list_type07.pag_none{max-height:600px;}
+.relation_list_type08{max-height:370px;}
+.relation_list_type08.pag_none{max-height:410px;}
 .relation_list > li{margin-top:10px; border:1px solid #d4d4d4;}
 .relation_list > li:first-child{margin-top:0;}
 .relation_list > li .relation_box{padding:12px 60px 12px 15px; position:relative;}
@@ -1002,6 +1005,8 @@ background-color:#fff; border:1px solid #d4d4d4; border-radius:10px; }
 .modal-body .list_title_area > .pag_info{margin-top:10px;}
 .modal-body .list_title_area01{margin-top:0;}
 .modal-body .list_title_area02{margin-top:0; margin-bottom:10px;}
+.modal-body .list_title_area03{margin-top:0; }
+.modal-body .list_title_area03 .pag_info{margin-top:0; margin-bottom:10px;}
  
 .modal-body .pop_tbl_area .tbl_topic_area{display:none;}
 .modal-body .pop_tbl_area .tbl_topic_area > td{padding:0; text-align:left;}
